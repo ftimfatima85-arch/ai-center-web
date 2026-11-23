@@ -3,65 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARKAAN AI Center – Empowering the Future of Intelligence</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Arkaan AI Center - Home</title>
+  <link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 <body>
-  <header>
-    <div class="logo">⚡ ARKAAN AI Center</div>
-    <nav>
-      <div class="hamburger"><span></span><span></span><span></span></div>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="technology.html">Technology</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="ceo.html">CEO Talk</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <div class="logo">Arkaan AI Center</div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="register.html" class="cta-button">Register Now</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main class="main-content">
-    <section class="hero fade-in">
-      <h1>Pioneering Next-Gen Artificial Intelligence</h1>
-      <p>At ARKAAN AI Center, we architect intelligent systems, advanced neural models, and breakthrough technologies that accelerate human potential.</p>
-      
-      <div class="hero-actions">
-        <a href="technology.html" class="btn btn-primary">Discover Technology</a>
-        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Shape the Future of AI</h1>
+      <p>Join Arkaan AI Center to learn cutting‑edge artificial intelligence, robotics, and data science from industry experts.</p>
+      <button class="btn explore" onclick="location.href='programs.html'">Explore Programs</button>
+      <button class="btn register" onclick="location.href='register.html'">Register Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero.jpg" alt="AI robotics illustration" />
+    </div>
+  </section>
+
+  <!-- About Arkaan Section -->
+  <section class="section bg-light container">
+    <h2>About Arkaan AI Center</h2>
+    <div class="row">
+      <div class="col">
+        <p>Arkaan AI Center is a hub for AI education and research, offering hands‑on programs that empower students to become AI innovators.</p>
+        <p>Our mission is to deliver practical AI skills, foster cutting‑edge research, and drive digital transformation.</p>
       </div>
-
-      <div class="feature-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80" alt="Artificial Intelligence Neural Network" />
+      <div class="col">
+        <img src="images/about.jpg" alt="Students in lab" style="width:100%; border-radius:8px;" />
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cards-grid fade-in">
-      <div class="card">
-        <div class="card-icon">🧠</div>
-        <h3>Neural Foundations</h3>
-        <p>Developing deep learning architectures and foundation models tailored for high-performance cognitive computation.</p>
+  <!-- Why Choose Us -->
+  <section class="section bg-white container">
+    <h2>Why Choose Us</h2>
+    <div class="row">
+      <div class="col icon-box">
+        <i>🤖</i>
+        <h4>Cutting‑Edge Labs</h4>
+        <p>State‑of‑the‑art robotics and AI labs.</p>
       </div>
-
-      <div class="card">
-        <div class="card-icon">⚡</div>
-        <h3>Autonomous Systems</h3>
-        <p>Integrating real-time decision engines, intelligent robotics, and edge AI for mission-critical automation.</p>
+      <div class="col icon-box">
+        <i>📈</i>
+        <h4>Industry Projects</h4>
+        <p>Work on real‑world AI projects with partners.</p>
       </div>
-
-      <div class="card">
-        <div class="card-icon">🌐</div>
-        <h3>Enterprise Scalability</h3>
-        <p>Deploying distributed cloud intelligence architectures designed for resilience, security, and global impact.</p>
+      <div class="col icon-box">
+        <i>👩‍💻</i>
+        <h4>Expert Mentors</h4>
+        <p>Learn from AI researchers and professionals.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Featured Projects -->
+  <section class="section bg-light container">
+    <h2>Featured Projects & Activities</h2>
+    <div class="row">
+      <div class="col">
+        <div class="course-card">
+          <img src="images/project1.jpg" alt="Autonomous Drone" />
+          <div class="card-body">
+            <h3>Autonomous Drone Navigation</h3>
+            <p>AI‑driven path‑planning for indoor drones.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="course-card">
+          <img src="images/project2.jpg" alt="AI Chatbot" />
+          <div class="card-body">
+            <h3>AI Customer Support Chatbot</h3>
+            <p>Multilingual chatbot with natural language understanding.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section bg-white container">
+    <h2>Student Learning & Innovation Gallery</h2>
+    <div class="row gallery">
+      <div class="col"><img src="images/gallery1.jpg" alt="Lab work" /></div>
+      <div class="col"><img src="images/gallery2.jpg" alt="Robotics" /></div>
+      <div class="col"><img src="images/gallery3.jpg" alt="Data analytics" /></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section bg-light container">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial">
+      <p>"The hands‑on AI projects gave me confidence to start my own startup."</p>
+      <h5>— Alex M., Graduate</h5>
+    </div>
+    <div class="testimonial">
+      <p>"Excellent mentors and cutting‑edge labs – a truly transformative experience."</p>
+      <h5>— Maya R., Current Student</h5>
+    </div>
+  </section>
+
+  <!-- Featured Courses (moved from below) -->
+  <section class="courses-section">
+    <div class="container">
+      <h2>Featured Programs</h2>
+      <div class="row">
+        <div class="col">
+          <div class="course-card">
+            <img src="images/course_ai.jpg" alt="AI Fundamentals" />
+            <div class="card-body">
+              <h3>AI Fundamentals</h3>
+              <p>Learn the core concepts of artificial intelligence, from search algorithms to neural networks.</p>
+              <a href="programs.html#ai-fundamentals" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="course-card">
+            <img src="images/course_ml.jpg" alt="Machine Learning" />
+            <div class="card-body">
+              <h3>Machine Learning</h3>
+              <p>Hands‑on projects building predictive models with Python and TensorFlow.</p>
+              <a href="programs.html#machine-learning" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="course-card">
+            <img src="images/course_web.jpg" alt="Web Development" />
+            <div class="card-body">
+              <h3>Web Development</h3>
+              <p>Full‑stack development with modern JavaScript frameworks and cloud deployment.</p>
+              <a href="programs.html#web-development" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Shape the Future of AI</h1>
+      <p>Join Arkaan AI Center to learn cutting‑edge artificial intelligence, robotics, and data science from industry experts.</p>
+      <button class="btn explore" onclick="location.href='programs.html'">Explore Programs</button>
+      <button class="btn register" onclick="location.href='register.html'">Register Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero.jpg" alt="AI robotics illustration" />
+    </div>
+  </section>
+
+  <!-- Featured Courses -->
+  <section class="courses-section">
+    <div class="container">
+      <h2>Featured Programs</h2>
+      <div class="row">
+        <div class="col">
+          <div class="course-card">
+            <img src="images/course_ai.jpg" alt="AI Fundamentals" />
+            <div class="card-body">
+              <h3>AI Fundamentals</h3>
+              <p>Learn the core concepts of artificial intelligence, from search algorithms to neural networks.</p>
+              <a href="programs.html#ai-fundamentals" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="course-card">
+            <img src="images/course_ml.jpg" alt="Machine Learning" />
+            <div class="card-body">
+              <h3>Machine Learning</h3>
+              <p>Hands‑on projects building predictive models with Python and TensorFlow.</p>
+              <a href="programs.html#machine-learning" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="course-card">
+            <img src="images/course_web.jpg" alt="Web Development" />
+            <div class="card-body">
+              <h3>Web Development</h3>
+              <p>Full‑stack development with modern JavaScript frameworks and cloud deployment.</p>
+              <a href="programs.html#web-development" class="learn-more">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 ARKAAN AI Center. All rights reserved. Driving innovation forward.</p>
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h4>Arkaan AI Center</h4>
+        <p>Empowering the next generation of AI innovators.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:0616434302">0616434302</a></p>
+        <p>Email: <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">&#x1F426;</a>
+          <a href="#" aria-label="Twitter">&#x1F426;</a>
+          <a href="#" aria-label="LinkedIn">&#x1F426;</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Arkaan AI Center. All rights reserved.
+    </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
