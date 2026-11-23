@@ -1,0 +1,88 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #87CEEB; /* sky blue */
+  color: #333;
+}
+
+/* Container for page content */
+.main-content {
+  background: #fff;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #0066cc;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+/* Mobile menu */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  nav ul {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    border: 1px solid #ddd;
+    display: none;
+  }
+  nav ul.show { display: flex; }
+}
+
+/* Simple fade-in animation for images */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
