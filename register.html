@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arkaan AI Center - Registration</title>
+  <link rel="stylesheet" href="css/style.css?v=2" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <div class="logo">Arkaan AI Center</div>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="register.html" class="cta-button">Register Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container" style="padding:80px 0;">
+    <h1 style="font-family:var(--font-heading);font-size:var(--h1-size);color:var(--navy);margin-bottom:30px;">Register for a Course</h1>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="course">Course Selection</label>
+        <select id="course" name="course" required>
+          <option value="" disabled selected>Select a program</option>
+          <option value="ai-fundamentals">AI Fundamentals</option>
+          <option value="artificial-intelligence">Artificial Intelligence</option>
+          <option value="machine-learning">Machine Learning</option>
+          <option value="data-analytics">Data Analytics</option>
+          <option value="web-development">Web Development</option>
+          <option value="other-tech">Other Technologies</option>
+        </select>
+      </div>
+      <button type="submit">Submit Registration</button>
+      <div id="formMessage" style="margin-top:15px;"></div>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h4>Arkaan AI Center</h4>
+        <p>Empowering the next generation of AI innovators.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:0616434302">0616434302</a></p>
+        <p>Email: <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">&#x1F426;</a>
+          <a href="#" aria-label="Twitter">&#x1F426;</a>
+          <a href="#" aria-label="LinkedIn">&#x1F426;</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Arkaan AI Center. All rights reserved.</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
