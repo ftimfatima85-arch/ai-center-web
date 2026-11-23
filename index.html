@@ -3,209 +3,691 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arkaan AI Center - Home</title>
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <title>Arkaan AI Center – Empowering the Future of AI & Robotics</title>
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
-  <!-- Navigation Bar -->
+  <!-- 1. Navigation Bar -->
   <nav>
     <div class="container">
-      <div class="logo">Arkaan AI Center</div>
-      <div class="nav-toggle" id="navToggle">
-        <span></span><span></span><span></span>
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-badge">⚡ AI</span>
+          <span>Arkaan AI Center</span>
+        </a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
       <ul id="navMenu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="register.html" class="cta-button">Register Now</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Shape the Future of AI</h1>
-      <p>Join Arkaan AI Center to learn cutting‑edge artificial intelligence, robotics, and data science from industry experts.</p>
-      <button class="btn explore" onclick="location.href='programs.html'">Explore Programs</button>
-      <button class="btn register" onclick="location.href='register.html'">Register Now</button>
+  <!-- 2. Homepage Hero Section with 3D Robot & Floating Elements -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🚀</span> Mogadishu’s Premier Center for Artificial Intelligence
+        </div>
+        <h1>Shape the Future with Artificial Intelligence</h1>
+        <p>
+          Arkaan AI Center is an advanced innovation and education platform in Mogadishu, Somalia. We empower the next generation of engineers, researchers, and innovators through rigorous hands-on training in machine learning, autonomous robotics, and data science.
+        </p>
+        <div class="hero-buttons">
+          <a href="#programs" class="btn btn-primary">Explore Programs</a>
+          <a href="register.html" class="btn btn-secondary">Join Us Today</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="robot-container">
+          <img src="images/hero_robot.jpg" alt="3D AI Robot Illustration" class="robot-img" />
+          
+          <!-- Floating Technology Badges -->
+          <div class="floating-badge badge-1">
+            <span class="badge-icon">🧠</span>
+            <div>
+              <strong>Neural Computing</strong>
+              <div style="font-size:0.75rem; color:#94A3B8;">Real-Time Inference</div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-2">
+            <span class="badge-icon">🤖</span>
+            <div>
+              <strong>Autonomous Robotics</strong>
+              <div style="font-size:0.75rem; color:#94A3B8;">Vision-Guided Systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="images/hero.jpg" alt="AI robotics illustration" />
+  </header>
+
+  <!-- 3. Our Impact (Animated Statistics Section) -->
+  <section class="container" style="position: relative; z-index: 10;">
+    <div class="impact-section" id="impact">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="1200"><span class="num">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Students Trained</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="85"><span class="num">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Completed Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="24"><span class="num">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Expert Mentors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12"><span class="num">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Training Programs</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About Arkaan Section -->
-  <section class="section bg-light container">
-    <h2>About Arkaan AI Center</h2>
-    <div class="row">
-      <div class="col">
-        <p>Arkaan AI Center is a hub for AI education and research, offering hands‑on programs that empower students to become AI innovators.</p>
-        <p>Our mission is to deliver practical AI skills, foster cutting‑edge research, and drive digital transformation.</p>
+  <!-- 4. Explore AI Fields -->
+  <section class="section bg-light" id="fields">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Areas of Specialization</span>
+        <h2 class="section-title">Explore Key Artificial Intelligence Fields</h2>
+        <p class="section-subtitle">Discover the fundamental and emerging disciplines driving modern digital transformation worldwide.</p>
       </div>
-      <div class="col">
-        <img src="images/about.jpg" alt="Students in lab" style="width:100%; border-radius:8px;" />
+
+      <div class="fields-grid">
+        <div class="field-card">
+          <div class="field-img-wrapper">
+            <img src="images/field_ai.jpg" alt="Artificial Intelligence" />
+          </div>
+          <div class="field-body">
+            <h3>Artificial Intelligence</h3>
+            <p>Master the principles of computational intelligence, cognitive architectures, search heuristics, and ethical AI development.</p>
+            <a href="programs.html#ai-fundamentals" class="learn-link">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="field-card">
+          <div class="field-img-wrapper">
+            <img src="images/field_ml.jpg" alt="Machine Learning" />
+          </div>
+          <div class="field-body">
+            <h3>Machine Learning</h3>
+            <p>Build predictive mathematical models using supervised, unsupervised, and ensemble algorithms with Python and Scikit-learn.</p>
+            <a href="programs.html#machine-learning" class="learn-link">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="field-card">
+          <div class="field-img-wrapper">
+            <img src="images/field_dl.jpg" alt="Deep Learning" />
+          </div>
+          <div class="field-body">
+            <h3>Deep Learning</h3>
+            <p>Design multi-layer neural architectures, CNNs, and Transformer foundation models for advanced pattern recognition.</p>
+            <a href="programs.html#artificial-intelligence" class="learn-link">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="field-card">
+          <div class="field-img-wrapper">
+            <img src="images/field_robotics.jpg" alt="Robotics" />
+          </div>
+          <div class="field-body">
+            <h3>Robotics & Automation</h3>
+            <p>Integrate sensors, inverse kinematics, and microcontrollers to engineer intelligent autonomous robotic systems.</p>
+            <a href="projects.html" class="learn-link">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="field-card">
+          <div class="field-img-wrapper">
+            <img src="images/field_cv.jpg" alt="Computer Vision" />
+          </div>
+          <div class="field-body">
+            <h3>Computer Vision</h3>
+            <p>Teach machines to interpret visual data from cameras using OpenCV, image segmentation, object detection, and spatial mapping.</p>
+            <a href="programs.html#other-tech" class="learn-link">Learn More <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="field-card">
+          <div class="field-img-wrapper">
+            <img src="images/field_ds.jpg" alt="Data Science" />
+          </div>
+          <div class="field-body">
+            <h3>Data Science & Analytics</h3>
+            <p>Extract actionable strategic insights from complex datasets using advanced statistical modeling, SQL, and interactive dashboards.</p>
+            <a href="programs.html#data-analytics" class="learn-link">Learn More <span>→</span></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="section bg-white container">
-    <h2>Why Choose Us</h2>
-    <div class="row">
-      <div class="col icon-box">
-        <i>🤖</i>
-        <h4>Cutting‑Edge Labs</h4>
-        <p>State‑of‑the‑art robotics and AI labs.</p>
+  <!-- 5. Featured Programs -->
+  <section class="section bg-white" id="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Curriculum & Cohorts</span>
+        <h2 class="section-title">Featured Training Programs</h2>
+        <p class="section-subtitle">Structured, mentor-led programs designed to transition ambitious students into high-impact practitioners.</p>
       </div>
-      <div class="col icon-box">
-        <i>📈</i>
-        <h4>Industry Projects</h4>
-        <p>Work on real‑world AI projects with partners.</p>
-      </div>
-      <div class="col icon-box">
-        <i>👩‍💻</i>
-        <h4>Expert Mentors</h4>
-        <p>Learn from AI researchers and professionals.</p>
+
+      <div class="programs-grid">
+        <div class="program-card">
+          <div class="program-img-box">
+            <img src="images/course_ai.jpg" alt="AI Fundamentals" />
+            <span class="program-duration">⏱️ 8 Weeks</span>
+          </div>
+          <div class="program-body">
+            <h3>AI Fundamentals</h3>
+            <p>Core concepts of logic, prompt engineering, and foundational artificial intelligence pipelines.</p>
+            <a href="register.html" class="btn btn-primary" style="width:100%;">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-img-box">
+            <img src="images/course_ml.jpg" alt="Machine Learning" />
+            <span class="program-duration">⏱️ 12 Weeks</span>
+          </div>
+          <div class="program-body">
+            <h3>Machine Learning Mastery</h3>
+            <p>End-to-end predictive modeling, neural algorithms, and hands-on Python model training.</p>
+            <a href="register.html" class="btn btn-primary" style="width:100%;">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-img-box">
+            <img src="images/course_data.jpg" alt="Data Analytics" />
+            <span class="program-duration">⏱️ 10 Weeks</span>
+          </div>
+          <div class="program-body">
+            <h3>Data Analytics & BI</h3>
+            <p>Practical data engineering, SQL, visualization, and strategic analytics for business solutions.</p>
+            <a href="register.html" class="btn btn-primary" style="width:100%;">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="program-card">
+          <div class="program-img-box">
+            <img src="images/course_web.jpg" alt="Web Development" />
+            <span class="program-duration">⏱️ 10 Weeks</span>
+          </div>
+          <div class="program-body">
+            <h3>Full-Stack Web & AI Apps</h3>
+            <p>Modern JavaScript, cloud-native backend deployment, and building user interfaces for AI models.</p>
+            <a href="register.html" class="btn btn-primary" style="width:100%;">Enroll Now</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects -->
-  <section class="section bg-light container">
-    <h2>Featured Projects & Activities</h2>
-    <div class="row">
-      <div class="col">
-        <div class="course-card">
-          <img src="images/project1.jpg" alt="Autonomous Drone" />
-          <div class="card-body">
+  <!-- 6. Why Choose Arkaan AI Center? -->
+  <section class="section bg-light" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Arkaan Advantage</span>
+        <h2 class="section-title">Why Choose Arkaan AI Center?</h2>
+        <p class="section-subtitle">We bridge the gap between academic theory and real-world technological capability.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🔬</div>
+          <h3>Cutting-Edge Labs</h3>
+          <p>Access high-performance GPU hardware, specialized robotics kits, and dedicated collaborative workspaces.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📈</div>
+          <h3>Industry-Grade Projects</h3>
+          <p>Build production-ready applications that tackle healthcare, agriculture, and logistical problems.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">👩‍🏫</div>
+          <h3>Expert Mentorship</h3>
+          <p>Learn directly from certified AI practitioners, university researchers, and senior tech engineers.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🎓</div>
+          <h3>Career Acceleration</h3>
+          <p>Earn verified industry credentials, build an impressive GitHub portfolio, and connect with hiring partners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Featured Student Projects -->
+  <section class="section bg-white" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Student Innovations</span>
+        <h2 class="section-title">Featured Technology & AI Projects</h2>
+        <p class="section-subtitle">Real-world systems researched, architected, and built by our program participants.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img-box">
+            <img src="images/project1.jpg" alt="Autonomous Drone Navigation" />
+          </div>
+          <div class="project-body">
+            <div class="project-category">Robotics & Vision</div>
             <h3>Autonomous Drone Navigation</h3>
-            <p>AI‑driven path‑planning for indoor drones.</p>
+            <p>AI-driven path-planning algorithm enabling indoor drones to navigate complex obstacle fields without GPS.</p>
+            <a href="projects.html" class="btn btn-secondary" style="color:var(--navy); border-color:var(--border-color); width:100%;">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img-box">
+            <img src="images/project2.jpg" alt="Multilingual AI Healthcare Chatbot" />
+          </div>
+          <div class="project-body">
+            <div class="project-category">Natural Language Processing</div>
+            <h3>AI Support Chatbot</h3>
+            <p>A conversational AI assistant providing 24/7 multilingual healthcare triage and patient guidance.</p>
+            <a href="projects.html" class="btn btn-secondary" style="color:var(--navy); border-color:var(--border-color); width:100%;">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img-box">
+            <img src="images/project3.jpg" alt="Real-Time Data Analytics Dashboard" />
+          </div>
+          <div class="project-body">
+            <div class="project-category">Data Analytics</div>
+            <h3>IoT Data Telemetry Dashboard</h3>
+            <p>Interactive web platform monitoring sensor arrays with live streaming data pipelines and anomaly detection.</p>
+            <a href="projects.html" class="btn btn-secondary" style="color:var(--navy); border-color:var(--border-color); width:100%;">View Project</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img-box">
+            <img src="images/project4.jpg" alt="AI-Controlled Robotic Arm" />
+          </div>
+          <div class="project-body">
+            <div class="project-category">Automation</div>
+            <h3>AI-Controlled Robotic Arm</h3>
+            <p>Vision-guided robotic arm performing precision pick-and-place sorting using deep reinforcement learning.</p>
+            <a href="projects.html" class="btn btn-secondary" style="color:var(--navy); border-color:var(--border-color); width:100%;">View Project</a>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="course-card">
-          <img src="images/project2.jpg" alt="AI Chatbot" />
-          <div class="card-body">
-            <h3>AI Customer Support Chatbot</h3>
-            <p>Multilingual chatbot with natural language understanding.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="section bg-white container">
-    <h2>Student Learning & Innovation Gallery</h2>
-    <div class="row gallery">
-      <div class="col"><img src="images/gallery1.jpg" alt="Lab work" /></div>
-      <div class="col"><img src="images/gallery2.jpg" alt="Robotics" /></div>
-      <div class="col"><img src="images/gallery3.jpg" alt="Data analytics" /></div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section bg-light container">
-    <h2>What Our Students Say</h2>
-    <div class="testimonial">
-      <p>"The hands‑on AI projects gave me confidence to start my own startup."</p>
-      <h5>— Alex M., Graduate</h5>
-    </div>
-    <div class="testimonial">
-      <p>"Excellent mentors and cutting‑edge labs – a truly transformative experience."</p>
-      <h5>— Maya R., Current Student</h5>
-    </div>
-  </section>
-
-  <!-- Featured Courses (moved from below) -->
-  <section class="courses-section">
+  <!-- 8. How We Teach (3 Visual Steps) -->
+  <section class="section bg-light" id="methodology">
     <div class="container">
-      <h2>Featured Programs</h2>
-      <div class="row">
-        <div class="col">
-          <div class="course-card">
-            <img src="images/course_ai.jpg" alt="AI Fundamentals" />
-            <div class="card-body">
-              <h3>AI Fundamentals</h3>
-              <p>Learn the core concepts of artificial intelligence, from search algorithms to neural networks.</p>
-              <a href="programs.html#ai-fundamentals" class="learn-more">Learn More</a>
+      <div class="section-header">
+        <span class="section-tag">Learning Methodology</span>
+        <h2 class="section-title">How We Teach</h2>
+        <p class="section-subtitle">Our three-stage pedagogical framework transforms foundational concepts into mastery.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">💡</div>
+          <h3>Learn</h3>
+          <p>Students master foundational mathematics, computational logic, data structures, and the theoretical underpinnings of artificial intelligence.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">💻</div>
+          <h3>Practice</h3>
+          <p>Students engage in intensive weekly laboratory sessions, coding algorithms from scratch and debugging edge cases with expert mentors.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">🚀</div>
+          <h3>Build</h3>
+          <p>Students collaborate in teams to build, test, and deploy functional real-world technology projects that solve pressing community and industry challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Upcoming Events -->
+  <section class="section bg-white" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Workshops & Competitions</span>
+        <h2 class="section-title">Upcoming Events & Seminars</h2>
+        <p class="section-subtitle">Join our collaborative technical sessions, hackathons, and guest lectures.</p>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-img-box">
+            <img src="images/event_workshop.jpg" alt="AI Workshop" />
+            <div class="event-date-badge">
+              <div class="event-date-day">05</div>
+              <div class="event-date-month">Dec</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <h3>Hands-On Prompt Engineering & LLM Workshop</h3>
+            <p>A full-day intensive workshop exploring model fine-tuning, system prompts, and API integration for local tech entrepreneurs.</p>
+            <a href="register.html" class="btn btn-primary">Register for Event</a>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-box">
+            <img src="images/event_robotics.jpg" alt="Robotics Competition" />
+            <div class="event-date-badge">
+              <div class="event-date-day">18</div>
+              <div class="event-date-month">Dec</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <h3>Mogadishu Youth Robotics & Drone Challenge</h3>
+            <p>Annual robotics showcase bringing together top student engineering teams to compete in autonomous navigation and precision tasks.</p>
+            <a href="register.html" class="btn btn-primary">Join as Participant</a>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-box">
+            <img src="images/event_seminar.jpg" alt="Technology Seminar" />
+            <div class="event-date-badge">
+              <div class="event-date-day">10</div>
+              <div class="event-date-month">Jan</div>
+            </div>
+          </div>
+          <div class="event-body">
+            <h3>AI in Healthcare & Agriculture Symposium</h3>
+            <p>Distinguished guest lecture series exploring computer vision in crop diagnostics and clinical machine learning applications.</p>
+            <a href="register.html" class="btn btn-primary">Reserve Seat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Latest AI News & Blogs -->
+  <section class="section bg-light" id="news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Insights & Research</span>
+        <h2 class="section-title">Latest AI News & Updates</h2>
+        <p class="section-subtitle">Read our latest research announcements, student achievements, and technology analyses.</p>
+      </div>
+
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-img-box">
+            <img src="images/news_launch.jpg" alt="New AI Fundamentals Cohort" />
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 November 15, 2026</div>
+            <h3>Arkaan AI Center Launches New AI Fundamentals Program</h3>
+            <p>A brand-new 8-week curriculum designed for beginners to master core computational reasoning and modern machine learning tools.</p>
+            <a href="article1.html" class="btn btn-primary">Read Full Article →</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-img-box">
+            <img src="images/news_competition.jpg" alt="Student Robotics Team Victory" />
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 November 8, 2026</div>
+            <h3>Student Team Wins National AI & Robotics Innovation Contest</h3>
+            <p>Our student robotics club secured first place with an autonomous search-and-rescue drone engineered inside the Arkaan lab.</p>
+            <a href="article2.html" class="btn btn-primary">Read Full Article →</a>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-img-box">
+            <img src="images/news_partnership.jpg" alt="University AI Partnership" />
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 October 28, 2026</div>
+            <h3>Strategic Partnerships Inked to Train 1,000+ University Students</h3>
+            <p>Joint memorandums signed with academic institutions to provide GPU access and hands-on elective AI modules across Somalia.</p>
+            <a href="article3.html" class="btn btn-primary">Read Full Article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Student Success Stories -->
+  <section class="section bg-white" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">Student Success Stories</h2>
+        <p class="section-subtitle">Hear how Arkaan AI Center shaped the career journeys of our alumni.</p>
+      </div>
+
+      <div class="stories-grid">
+        <div class="story-card">
+          <p class="story-quote">
+            "Before joining Arkaan AI Center, machine learning felt overwhelmingly theoretical. The practical labs, mentor feedback, and drone project gave me the confidence to secure a software engineering role."
+          </p>
+          <div class="story-author">
+            <img src="images/student1.jpg" alt="Amina Warsame" class="story-avatar" />
+            <div class="story-info">
+              <h4>Amina Warsame</h4>
+              <p>AI Fundamentals Graduate • Junior ML Engineer</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="course-card">
-            <img src="images/course_ml.jpg" alt="Machine Learning" />
-            <div class="card-body">
-              <h3>Machine Learning</h3>
-              <p>Hands‑on projects building predictive models with Python and TensorFlow.</p>
-              <a href="programs.html#machine-learning" class="learn-more">Learn More</a>
+
+        <div class="story-card">
+          <p class="story-quote">
+            "The hands-on robotics workshops at Arkaan allowed our team to build an autonomous drone from scratch. Winning the national innovation challenge was a direct result of the center's world-class mentorship."
+          </p>
+          <div class="story-author">
+            <img src="images/student2.jpg" alt="Hassan Abdi" class="story-avatar" />
+            <div class="story-info">
+              <h4>Hassan Abdi</h4>
+              <p>Robotics & Embedded Systems Alumnus</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="course-card">
-            <img src="images/course_web.jpg" alt="Web Development" />
-            <div class="card-body">
-              <h3>Web Development</h3>
-              <p>Full‑stack development with modern JavaScript frameworks and cloud deployment.</p>
-              <a href="programs.html#web-development" class="learn-more">Learn More</a>
+
+        <div class="story-card">
+          <p class="story-quote">
+            "The data analytics bootcamp completely transformed how I analyze business information. The SQL and predictive modeling modules were immediately applicable to my daily professional work."
+          </p>
+          <div class="story-author">
+            <img src="images/student3.jpg" alt="Khadija Mohamed" class="story-avatar" />
+            <div class="story-info">
+              <h4>Khadija Mohamed</h4>
+              <p>Data Analytics Alumna • BI Specialist</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Shape the Future of AI</h1>
-      <p>Join Arkaan AI Center to learn cutting‑edge artificial intelligence, robotics, and data science from industry experts.</p>
-      <button class="btn explore" onclick="location.href='programs.html'">Explore Programs</button>
-      <button class="btn register" onclick="location.href='register.html'">Register Now</button>
-    </div>
-    <div class="hero-image">
-      <img src="images/hero.jpg" alt="AI robotics illustration" />
+
+  <!-- 12. Our Partners -->
+  <section class="section bg-light" id="partners">
+    <div class="container" style="text-align: center;">
+      <div class="section-header">
+        <span class="section-tag">Collaborative Ecosystem</span>
+        <h2 class="section-title">Our Partners & Academic Network</h2>
+        <p class="section-subtitle">Collaborating with academic institutions, innovation hubs, and tech associations.</p>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-badge">🎓 Somali University Network</div>
+        <div class="partner-badge">💡 SIMAD iLab</div>
+        <div class="partner-badge">🌐 Mogadishu Tech Community</div>
+        <div class="partner-badge">🤖 IEEE Robotics & Automation Society</div>
+        <div class="partner-badge">⚡ East Africa AI Initiative</div>
+      </div>
     </div>
   </section>
 
-  <!-- Featured Courses -->
-  <section class="courses-section">
+  <!-- 13. Frequently Asked Questions -->
+  <section class="section bg-white" id="faq">
     <div class="container">
-      <h2>Featured Programs</h2>
-      <div class="row">
-        <div class="col">
-          <div class="course-card">
-            <img src="images/course_ai.jpg" alt="AI Fundamentals" />
-            <div class="card-body">
-              <h3>AI Fundamentals</h3>
-              <p>Learn the core concepts of artificial intelligence, from search algorithms to neural networks.</p>
-              <a href="programs.html#ai-fundamentals" class="learn-more">Learn More</a>
+      <div class="section-header">
+        <span class="section-tag">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Find answers to questions regarding our programs, prerequisites, and registration.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>What is Arkaan AI Center?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Arkaan AI Center is an advanced education and innovation hub located in Mogadishu, Somalia. We provide practical, mentor-led programs in artificial intelligence, machine learning, robotics, and software engineering.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What programs and courses are available?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We offer comprehensive courses including AI Fundamentals, Machine Learning Mastery, Data Analytics & Business Intelligence, Full-Stack AI Web Apps, and Autonomous Robotics.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How can I register for an upcoming cohort?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            You can register directly on our website by visiting the <a href="register.html">Registration Page</a>, selecting your preferred program, and submitting your details. Our academic team will contact you within 24–48 hours.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Where is the center located?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Our physical innovation facility is located at <strong>Wadajir, KM4, Mogadishu, Somalia</strong>. Visitors are welcome during regular campus operating hours.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Who can join the programs?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Our programs cater to motivated university students, high school graduates, software developers, and working professionals seeking to transition into the artificial intelligence and data industry.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. Join Arkaan AI Center (Call-to-Action Banner) -->
+  <section class="container" style="padding: 40px 0 80px;">
+    <div class="cta-banner">
+      <h2>Ready to Build the Future of AI?</h2>
+      <p>
+        Join hundreds of talented students mastering artificial intelligence, robotics, and cutting-edge software. Apply for our upcoming cohorts today.
+      </p>
+      <div class="cta-buttons">
+        <a href="register.html" class="btn btn-primary">Join Our Programs</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Admissions</a>
+        <a href="programs.html" class="btn btn-secondary">Explore All Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. Location & Contact Information with Google Maps -->
+  <section class="section bg-light" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Campus & Inquiry</span>
+        <h2 class="section-title">Location and Contact Information</h2>
+        <p class="section-subtitle">Visit our campus facility or connect with our support team.</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Contact Card -->
+        <div class="contact-info-card">
+          <div>
+            <h3 style="font-family:var(--font-heading); color:var(--navy); font-size:1.35rem; margin-bottom:20px;">Arkaan AI Center</h3>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">📍</div>
+              <div class="contact-detail-text">
+                <h4>Physical Location</h4>
+                <p>Wadajir, KM4, Mogadishu, Somalia</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">📞</div>
+              <div class="contact-detail-text">
+                <h4>Official Phone Number</h4>
+                <p><a href="tel:0616434302">+252 61 6434302</a> / <a href="tel:0616434302">0616434302</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">✉️</div>
+              <div class="contact-detail-text">
+                <h4>Official Email Address</h4>
+                <p><a href="mailto:contact@arkaan-ai-center.org">contact@arkaan-ai-center.org</a></p>
+                <p><a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="font-family:var(--font-heading); color:var(--navy); font-size:1rem; margin-bottom:10px;">Connect With Us</h4>
+            <div class="social-links">
+              <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn">in</a>
+              <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="Twitter">𝕏</a>
+              <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">f</a>
+              <a href="https://github.com/ftimfatima85-arch" target="_blank" class="social-btn" aria-label="GitHub">gh</a>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="course-card">
-            <img src="images/course_ml.jpg" alt="Machine Learning" />
-            <div class="card-body">
-              <h3>Machine Learning</h3>
-              <p>Hands‑on projects building predictive models with Python and TensorFlow.</p>
-              <a href="programs.html#machine-learning" class="learn-more">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="course-card">
-            <img src="images/course_web.jpg" alt="Web Development" />
-            <div class="card-body">
-              <h3>Web Development</h3>
-              <p>Full‑stack development with modern JavaScript frameworks and cloud deployment.</p>
-              <a href="programs.html#web-development" class="learn-more">Learn More</a>
-            </div>
-          </div>
+
+        <!-- Google Maps Embed for KM4, Mogadishu -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.123456789!2d45.318889!3d2.037222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d5843a85b6b1235%3A0x123456789abcdef!2sKM4%2C%20Mogadishu%2C%20Somalia!5e0!3m2!1sen!2sso!4v1700000000000!5m2!1sen!2sso"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Arkaan AI Center Location, KM4 Mogadishu">
+          </iframe>
         </div>
       </div>
     </div>
@@ -216,34 +698,43 @@
     <div class="container footer-container">
       <div class="footer-col">
         <h4>Arkaan AI Center</h4>
-        <p>Empowering the next generation of AI innovators.</p>
+        <p>A pioneering technology hub dedicated to accelerating artificial intelligence, machine learning, and robotics in Mogadishu, Somalia.</p>
+        <p>Wadajir, KM4, Mogadishu, Somalia.</p>
       </div>
+
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>Programs</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html#ai-fundamentals">AI Fundamentals</a></li>
+          <li><a href="programs.html#machine-learning">Machine Learning</a></li>
+          <li><a href="programs.html#data-analytics">Data Analytics</a></li>
+          <li><a href="programs.html#web-development">Web & AI Apps</a></li>
+          <li><a href="programs.html#other-tech">Robotics & IoT</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Navigation</h4>
+        <ul>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="projects.html">Featured Projects</a></li>
+          <li><a href="#events">Upcoming Events</a></li>
+          <li><a href="#news">News & Articles</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Phone: <a href="tel:0616434302">0616434302</a></p>
-        <p>Email: <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook">&#x1F426;</a>
-          <a href="#" aria-label="Twitter">&#x1F426;</a>
-          <a href="#" aria-label="LinkedIn">&#x1F426;</a>
-        </div>
+        <h4>Contact & Admissions</h4>
+        <p>Phone: <a href="tel:0616434302">+252 61 6434302</a></p>
+        <p>Email: <a href="mailto:contact@arkaan-ai-center.org">contact@arkaan-ai-center.org</a></p>
+        <p style="margin-top:15px;"><a href="register.html" class="btn btn-primary" style="padding:8px 16px; font-size:0.85rem;">Register Online</a></p>
       </div>
     </div>
+
     <div class="copyright">
-      © 2026 Arkaan AI Center. All rights reserved.
+      &copy; 2026 Arkaan AI Center. All rights reserved. Wadajir, KM4, Mogadishu, Somalia.
     </div>
   </footer>
 
