@@ -2,26 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Services & Solutions – Arkaan AI Center</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
-  <!-- Site Header -->
-    <!-- =========================================================================
-       1. HEADER & RIGHT-SIDE HAMBURGER MENU (No links in front, No Join Us)
-  ========================================================================== -->
+  <!-- Pure White Site Header with Arkaan Logo & Right Hamburger -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo-wrap">
-        <img src="images/arkaan_logo.png" alt="Arkaan — Bridging the Gap" class="brand-logo-img">
+        <img src="images/arkaan_logo.png" alt="Arkaan AI Center" class="brand-logo-img">
       </a>
-
-      <!-- Right-side Hamburger Menu Button (No front links, No Join Us) -->
       <div class="nav-actions">
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
           <span>Menu</span> <i class="fa-solid fa-bars"></i>
@@ -30,164 +27,151 @@
     </div>
   </header>
 
-  <!-- Right-side Slide-out Navigation Drawer (Only the 8 items, No Join Us) -->
+  <!-- Right Drawer -->
   <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
   <aside class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div class="mobile-drawer-header">
-        <div class="logo-wrapper">
-          <div class="logo-icon">
-            <i class="fa-solid fa-brain"></i>
-          </div>
-          <div class="logo-text">
-            <div class="logo-title">arkaan<span>.ai</span></div>
-          </div>
+        <div class="brand-logo-wrap">
+          <img src="images/arkaan_logo.png" alt="Arkaan AI Center" style="height:44px; filter:brightness(0) invert(1);">
         </div>
         <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Menu">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-
       <nav class="mobile-menu-links">
-        <a href="index.html" >Home <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="about.html" >About Us <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="about.html">About Us <i class="fa-solid fa-chevron-right"></i></a>
         <a href="services.html" class="active">Services <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="programs.html" >AI Programs <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="projects.html" >Projects <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="news.html" >News & Updates <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="gallery.html" >Gallery <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="contact.html" >Contact <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="programs.html">AI Programs <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="news.html">News &amp; Updates <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="gallery.html">Gallery <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
       </nav>
     </div>
-
     <div>
       <div class="social-icons-wrap" style="justify-content:center; padding-top:20px;">
-        <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
   </aside>
 
-  <!-- Page Hero -->
-  <section class="page-hero-banner">
+  <!-- Inner Hero -->
+  <section class="inner-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html" style="color:var(--cyan);">Home</a>
-        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
-        <span>Services & Solutions</span>
-      </div>
-      <h1>Our AI & Technology Services</h1>
-      <p>Transforming enterprise and institutional capabilities through tailored artificial intelligence, automation, and data research.</p>
+      <span class="hero-tagline">SPECIALIST SOLUTIONS & ADVISORY</span>
+      <h1>Our Services &amp; Capabilities</h1>
+      <p>Specialist support for people, businesses, and public institutions to accelerate artificial intelligence adoption and digital leadership.</p>
     </div>
   </section>
 
-  <!-- Specialist Support & Services Grid (From Screenshot 2) -->
-  <section class="section bg-light">
+  <!-- 7 Specialist Services Section -->
+  <section class="services-section">
     <div class="container">
-      <div style="text-align:center; max-width:700px; margin:0 auto 50px;">
-        <span class="section-tag">Specialist Support</span>
-        <h2 class="section-title">Specialist support for people, businesses, and institutions.</h2>
-        <p class="section-subtitle">Bridging theory and real-world deployment across East African private and public sectors.</p>
+      <div class="specialist-tag">
+        Specialist support for people, businesses, and institutions.
       </div>
 
       <div class="services-grid-7">
         
-        <!-- Card 1 -->
-        <article class="service-split-card">
+        <!-- Service 1 -->
+        <article class="service-split-card" id="ai-strategy">
           <div class="service-split-photo">
-            <img src="images/olad.png" alt="Strategy, Governance & Institutional Strengthening" loading="lazy">
+            <img src="images/arkaan_roundtable.jpg" alt="AI Strategy & Digital Governance" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Strategy, Governance &amp; Institutional Strengthening</h3>
-              <p>We support organizations and institutions to strengthen leadership, governance, and operational performance.</p>
+              <h3>AI Strategy, Governance &amp; Digital Transformation</h3>
+              <p>We support government ministries and private institutions to establish national AI frameworks, digital policy, and ethical technology governance.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=strategy" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
-        <!-- Card 2 -->
-        <article class="service-split-card">
+        <!-- Service 2 -->
+        <article class="service-split-card" id="ai-research">
           <div class="service-split-photo">
-            <img src="images/ar.png" alt="Monitoring, Evaluation, Research & Learning" loading="lazy">
+            <img src="images/arkaan_youth_leader.jpg" alt="Applied AI Research & MERL" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Monitoring, Evaluation, Research &amp; Learning (MERL)</h3>
-              <p>We support evidence-based decision-making and accountability across programs.</p>
+              <h3>Applied AI Research, Data Systems &amp; MERL</h3>
+              <p>We advance evidence-based machine learning, regional dataset collection, and performance analytics across development initiatives.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=merl" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="service-split-card">
+        <!-- Service 3 -->
+        <article class="service-split-card" id="ai-implementation">
           <div class="service-split-photo">
-            <img src="images/un.png" alt="Program Design & Implementation" loading="lazy">
+            <img src="images/arkaan_panel.jpg" alt="Intelligent Program Implementation" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Program Design &amp; Implementation</h3>
-              <p>We work with development partners and government to design and implement high-impact programs.</p>
+              <h3>Intelligent Program Design &amp; Implementation</h3>
+              <p>We design and deploy impactful digital public infrastructure, enterprise automation platforms, and high-impact technology solutions.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=delivery" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
-        <!-- Card 4 -->
-        <article class="service-split-card">
+        <!-- Service 4 -->
+        <article class="service-split-card" id="ai-talent">
           <div class="service-split-photo">
-            <img src="images/aw.png" alt="Human Capital Development" loading="lazy">
+            <img src="images/arkaan_speaker.jpg" alt="Human Capital Acceleration" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Human Capital Development</h3>
-              <p>We work with organizations, development partners, and government institutions to strengthen human capital systems that improve performance, leadership, and institutional effectiveness.</p>
+              <h3>Human Capital &amp; AI Talent Acceleration</h3>
+              <p>We train students, university graduates, and professionals with world-class machine learning, cloud systems, and technical leadership skills.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=talent" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
-        <!-- Card 5 -->
-        <article class="service-split-card">
+        <!-- Service 5 -->
+        <article class="service-split-card" id="youth-startups">
           <div class="service-split-photo">
-            <img src="images/arl.png" alt="Youth Skills, Innovation & Entrepreneurship" loading="lazy">
+            <img src="images/arkaan_screen.jpg" alt="Youth Startups & Entrepreneurship" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Youth Skills, Innovation &amp; Entrepreneurship</h3>
-              <p>We build human capital and economic opportunity through talent pipelines, entrepreneurship, and innovation.</p>
+              <h3>Youth Tech Skills, Startups &amp; Entrepreneurship</h3>
+              <p>We empower young innovators, incubate student-led tech startups, and build sustainable career pathways in software and emerging tech.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=startups" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
-        <!-- Card 6 -->
-        <article class="service-split-card">
+        <!-- Service 6 -->
+        <article class="service-split-card" id="enterprise-modernization">
           <div class="service-split-photo">
-            <img src="images/bl.jpg" alt="Private Sector Development & Market Systems" loading="lazy">
+            <img src="images/arkaan_president.jpg" alt="Enterprise AI Modernization" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Private Sector Development &amp; Market Systems</h3>
-              <p>We promote inclusive economic growth by strengthening enterprises and market ecosystems.</p>
+              <h3>Enterprise Modernization &amp; Private Sector AI</h3>
+              <p>We accelerate commercial business growth by integrating intelligent customer automation, data pipelines, and modern IT systems.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=enterprise" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
-        <!-- Card 7 -->
-        <article class="service-split-card">
+        <!-- Service 7 -->
+        <article class="service-split-card" id="mega-projects">
           <div class="service-split-photo">
-            <img src="images/br.jpg" alt="Project Management & Investment Development" loading="lazy">
+            <img src="images/arkaan_hall.jpg" alt="Digital Mega-Projects & AI Infrastructure" loading="lazy">
           </div>
           <div class="service-split-content">
             <div>
-              <h3>Project Management &amp; Investment Development</h3>
-              <p>We design, structure, and deliver large-scale, complex initiatives and productive mega-projects.</p>
+              <h3>Digital Mega-Projects &amp; AI Infrastructure</h3>
+              <p>We architect, structure, and deliver scalable technology infrastructure, GPU research clusters, and transformative digital mega-projects.</p>
             </div>
-            <a href="contact.html" class="service-learn-btn">Learn more</a>
+            <a href="contact.html?service=projects" class="service-learn-btn">Consult With Us</a>
           </div>
         </article>
 
@@ -195,46 +179,12 @@
     </div>
   </section>
 
-  <!-- Process Section -->
-  <section class="section bg-white">
+  <!-- CTA Section -->
+  <section class="section bg-soft" style="text-align:center;">
     <div class="container">
-      <div style="text-align:center; max-width:700px; margin:0 auto 50px;">
-        <span class="section-tag">Methodology</span>
-        <h2 class="section-title">How We Collaborate</h2>
-        <p class="section-subtitle">A disciplined four-phase approach that guarantees tangible business impact and sustainable knowledge transfer.</p>
-      </div>
-
-      <div class="card-grid-4">
-        <div class="service-card" style="text-align:center; align-items:center;">
-          <div style="width:48px; height:48px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:16px;">1</div>
-          <h4>Discover</h4>
-          <p>Deep-dive into business workflow challenges and audit data availability.</p>
-        </div>
-        <div class="service-card" style="text-align:center; align-items:center;">
-          <div style="width:48px; height:48px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:16px;">2</div>
-          <h4>Prototype</h4>
-          <p>Build and validate proof-of-concept AI models on localized test data.</p>
-        </div>
-        <div class="service-card" style="text-align:center; align-items:center;">
-          <div style="width:48px; height:48px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:16px;">3</div>
-          <h4>Deploy</h4>
-          <p>Integrate production-grade containerized microservices into your stack.</p>
-        </div>
-        <div class="service-card" style="text-align:center; align-items:center;">
-          <div style="width:48px; height:48px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; margin-bottom:16px;">4</div>
-          <h4>Empower</h4>
-          <p>Upskill your internal technical team for seamless ongoing operations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section bg-navy" style="text-align:center;">
-    <div class="container" style="max-width:750px;">
-      <h2 class="section-title">Let’s Discuss Your Organization’s Needs</h2>
-      <p class="section-subtitle" style="margin:0 auto 36px;">Schedule a technical consultation with our engineering and advisory faculty.</p>
-      <a href="contact.html" class="btn btn-cyan">Book an Advisory Meeting</a>
+      <h2 class="section-title">Ready to Partner with Arkaan AI Center?</h2>
+      <p class="section-subtitle" style="margin-bottom:32px;">Connect with our specialists in Wadajir, KM4, Mogadishu, Somalia.</p>
+      <a href="contact.html" class="btn btn-navy">Get In Touch Today <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </section>
 
@@ -244,14 +194,9 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo-wrap">
-        <img src="images/arkaan_logo.png" alt="Arkaan — Bridging the Gap" class="brand-logo-img">
-      </a>
-          <p>Mogadishu's premier AI education, research, and innovation ecosystem.</p>
-          <div class="social-icons-wrap">
-            <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
+            <img src="images/arkaan_logo.png" alt="Arkaan AI Center" style="height:48px; filter:brightness(0) invert(1);">
+          </a>
+          <p>Empowering AI Leadership. Building Somalia's Digital Future. Bridging human talent with intelligent technology across the Horn of Africa.</p>
         </div>
         <div>
           <h4 class="footer-heading">Navigation</h4>
@@ -260,26 +205,38 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="programs.html">AI Programs</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-heading">Contact</h4>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Wadajir, KM4, Mogadishu, Somalia</div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> 0616434302 / +252 61 6434302</div>
-          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> ftimfatima85@gmail.com</div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="news.html">News &amp; Insights</a></li>
+            <li><a href="contact.html">Support &amp; Inquiries</a></li>
+            <li><a href="admin.html">News Management (Admin)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Headquarters</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><div>Wadajir, KM4, Mogadishu, Somalia</div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:0616434302">0616434302</a> / <a href="tel:+252616434302">+252 61 6434302</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><div><a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></div></div>
         </div>
       </div>
       <div class="footer-bottom">
         <div>© 2026 Arkaan AI Center. All rights reserved.</div>
+        <div>Reference: <a href="http://arkaan.so/" target="_blank" style="color:#93C5FD;">arkaan.so</a></div>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/252616434302" target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/252616434302?text=Hello%20Arkaan%20AI%20Center!%20I%20would%20like%20more%20information." target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
-    <span class="floating-whatsapp-tooltip">Chat with Arkaan AI</span>
+    <span class="floating-whatsapp-tooltip">Chat with Arkaan</span>
   </a>
 
+  <script src="js/news-data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
