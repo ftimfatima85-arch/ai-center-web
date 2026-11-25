@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Management System – Arkaan AI Center</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body style="background:var(--light-bg);">
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+        <div class="logo-text">
+          <div class="logo-title">arkaan<span>.ai</span></div>
+          <div class="logo-subtitle">Administration Portal</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html">View Site</a>
+        <a href="news.html">News & Updates</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-navy btn-sm"><i class="fa-solid fa-house"></i> Return to Homepage</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <section class="section" id="adminLoginSection" style="padding-top:160px; min-height:80vh; display:flex; align-items:center;">
+    <div class="container" style="max-width:440px;">
+      <div class="admin-card" style="text-align:center;">
+        <div class="logo-icon" style="margin:0 auto 20px; width:54px; height:54px; font-size:1.6rem;">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h2 style="font-family:var(--font-heading); color:var(--navy); font-size:1.6rem; margin-bottom:8px;">Admin Portal</h2>
+        <p style="color:var(--muted-text); font-size:0.9rem; margin-bottom:28px;">Enter administrator security credentials to manage news, announcements, and events.</p>
+
+        <form id="adminLoginForm">
+          <div class="form-group" style="text-align:left;">
+            <label for="adminPassword">Administrator Password</label>
+            <input type="password" id="adminPassword" class="form-control" placeholder="••••••••" required>
+            <small style="color:var(--muted-light); font-size:0.8rem; display:block; margin-top:6px;">Default password: <code>arkaan2026</code></small>
+          </div>
+          <div id="loginError" style="display:none; color:#EF4444; font-size:0.88rem; margin-bottom:16px;">
+            <i class="fa-solid fa-circle-exclamation"></i> Invalid password. Please try again.
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Authenticate
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section class="section" id="adminDashboardSection" style="display:none; padding-top:130px;">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:32px; flex-wrap:wrap; gap:16px;">
+        <div>
+          <span class="section-tag">Content Administration</span>
+          <h2 class="section-title" style="margin-bottom:0;">News & Updates Manager</h2>
+        </div>
+        <div style="display:flex; gap:12px;">
+          <button class="btn btn-sm btn-navy" id="adminLogoutBtn"><i class="fa-solid fa-power-off"></i> Log Out</button>
+        </div>
+      </div>
+
+      <!-- Article Form Card -->
+      <div class="admin-card" style="margin-bottom:48px;">
+        <h3 id="formActionTitle" style="font-family:var(--font-heading); color:var(--navy); margin-bottom:24px; font-size:1.3rem;">
+          <i class="fa-solid fa-plus-circle" style="color:var(--blue-primary);"></i> Publish New Article
+        </h3>
+
+        <form id="newsArticleForm">
+          <input type="hidden" id="editArticleId">
+
+          <div style="display:grid; grid-template-columns:2fr 1fr 1fr; gap:20px;">
+            <div class="form-group">
+              <label for="newsTitle">Article Headline *</label>
+              <input type="text" id="newsTitle" class="form-control" placeholder="e.g. Official Partnership Announcement: Arkaan Hub..." required>
+            </div>
+            <div class="form-group">
+              <label for="newsCategory">Category *</label>
+              <select id="newsCategory" class="form-control" required>
+                <option value="Strategic Partnership">Strategic Partnership</option>
+                <option value="Program Launch">Program Launch</option>
+                <option value="Innovation Summit">Innovation Summit</option>
+                <option value="Robotics & AI">Robotics & AI</option>
+                <option value="Talent Development">Talent Development</option>
+                <option value="Academic Initiative">Academic Initiative</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="newsCategoryColor">Badge Color</label>
+              <select id="newsCategoryColor" class="form-control">
+                <option value="#0284C7">Sky Blue (#0284C7)</option>
+                <option value="#059669">Emerald Green (#059669)</option>
+                <option value="#7C3AED">Deep Purple (#7C3AED)</option>
+                <option value="#EA580C">Vibrant Orange (#EA580C)</option>
+                <option value="#DB2777">Rose Pink (#DB2777)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="newsImage">Featured Image URL or Path *</label>
+            <input type="text" id="newsImage" class="form-control" placeholder="e.g. images/news_launch.jpg or an https:// image link" required>
+            <div style="margin-top:8px; display:flex; gap:10px; font-size:0.8rem; color:var(--muted-text);">
+              <span>Quick local options:</span>
+              <a href="javascript:void(0)" onclick="document.getElementById('newsImage').value='images/news_launch.jpg'">news_launch.jpg</a> |
+              <a href="javascript:void(0)" onclick="document.getElementById('newsImage').value='images/news_partnership.jpg'">news_partnership.jpg</a> |
+              <a href="javascript:void(0)" onclick="document.getElementById('newsImage').value='images/news_competition.jpg'">news_competition.jpg</a> |
+              <a href="javascript:void(0)" onclick="document.getElementById('newsImage').value='images/project1.jpg'">project1.jpg</a>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="newsExcerpt">Short Description / Excerpt (shown on homepage card) *</label>
+            <textarea id="newsExcerpt" class="form-control" rows="2" placeholder="Brief 1-2 sentence preview..." required style="min-height:75px;"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="newsContent">Full Article HTML Content *</label>
+            <textarea id="newsContent" class="form-control" rows="8" placeholder="<p>Full paragraph story...</p><h3>Section Heading</h3><p>More details...</p>" required></textarea>
+          </div>
+
+          <div style="display:flex; gap:14px;">
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-cloud-arrow-up"></i> Save & Publish Story</button>
+            <button type="button" class="btn btn-navy" id="cancelEditBtn" style="display:none;">Cancel Edit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Existing Articles Table -->
+      <div class="admin-card">
+        <h3 style="font-family:var(--font-heading); color:var(--navy); margin-bottom:20px; font-size:1.3rem;">
+          <i class="fa-solid fa-list-check" style="color:var(--blue-primary);"></i> Published Articles Inventory
+        </h3>
+        
+        <div style="overflow-x:auto;">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th style="width:60px;">ID</th>
+                <th>Title / Headline</th>
+                <th style="width:160px;">Category</th>
+                <th style="width:140px;">Published Date</th>
+                <th style="width:160px;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminNewsTableBody">
+              <!-- Rendered via main.js renderAdminTable() -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/news-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
