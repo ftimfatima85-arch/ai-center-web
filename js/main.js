@@ -219,6 +219,22 @@ function initNewsCarousel() {
     });
   }
 
+  
+  // Mobile touch swiping support
+  let touchStartX = 0;
+  let touchEndX = 0;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 40) {
+      moveNext();
+    } else if (touchEndX - touchStartX > 40) {
+      movePrev();
+    }
+  }, { passive: true });
+
   window.addEventListener("resize", updateCarousel);
 }
 
