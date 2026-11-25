@@ -1,60 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery – ARKAAN AI Center</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery – Arkaan AI Center</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
-  <header>
-    <div class="logo">⚡ ARKAAN AI Center</div>
-    <nav>
-      <div class="hamburger"><span></span><span></span><span></span></div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="technology.html">Technology</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="ceo.html">CEO Talk</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="main-content">
-    <section class="hero fade-in">
-      <h1>Innovation Gallery</h1>
-      <p>A visual showcase of our state-of-the-art computational infrastructure, AI research labs, and automated systems.</p>
-    </section>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+        <div class="logo-text">
+          <div class="logo-title">arkaan<span>.ai</span></div>
+          <div class="logo-subtitle">AI & Technology Center</div>
+        </div>
+      </a>
 
-    <div class="gallery-grid fade-in">
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Quantum AI Processor" />
-        <div class="gallery-caption"><strong>Neural Processing Units</strong><br>Ultra-low latency silicon for deep learning inferencing.</div>
-      </div>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="programs.html">AI Programs</a>
+        <a href="projects.html">Projects</a>
+        <a href="news.html">News & Updates</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Cloud Infrastructure" />
-        <div class="gallery-caption"><strong>High-Density Compute Clusters</strong><br>Distributed GPU clusters powering petascale AI training.</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Robotics Lab" />
-        <div class="gallery-caption"><strong>Autonomous Robotics Lab</strong><br>Testing embodied AI agents in precision manipulation.</div>
-      </div>
-
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=600&q=80" alt="Spatial Intelligence" />
-        <div class="gallery-caption"><strong>Spatial Perception Labs</strong><br>Advanced spatial mapping and computer vision environments.</div>
+      <div class="nav-actions">
+        <a href="register.html" class="btn btn-primary btn-sm">Join Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
-  </main>
+  </header>
 
-  <footer>
-    <p>&copy; 2026 ARKAAN AI Center. All rights reserved.</p>
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="logo-wrapper">
+          <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="mobile-menu-links">
+        <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="about.html">About Us <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="services.html">Services <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="programs.html">AI Programs <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="news.html">News & Updates <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="gallery.html" class="active">Gallery <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Page Hero -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html" style="color:var(--cyan);">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+        <span>Visual Archive</span>
+      </div>
+      <h1>Campus & Innovation Gallery</h1>
+      <p>A glimpse into our robotics labs, hands-on student workshops, regional summits, and hackathons in Mogadishu.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/about.jpg" alt="Students in Arkaan Lab">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">CAMPUS LIFE</span>
+            <div class="gallery-title">AI Coding Labs Session</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/event_robotics.jpg" alt="Robotics Workshop">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">ROBOTICS</span>
+            <div class="gallery-title">Autonomous Drone Assembly</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/news_competition.jpg" alt="Innovation Summit">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">SUMMITS</span>
+            <div class="gallery-title">Leadership Innovation Summit 2026</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/news_launch.jpg" alt="Program Orientation">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">ACADEMY</span>
+            <div class="gallery-title">AI Fundamentals Cohort Welcome</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/project4.jpg" alt="Robotic Arm Testing">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">RESEARCH</span>
+            <div class="gallery-title">6-DOF Robotic Arm Prototype</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/event_workshop.jpg" alt="Technical Seminar">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">WORKSHOP</span>
+            <div class="gallery-title">Computer Vision Bootcamp</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/news_partnership.jpg" alt="Partnership Signing">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">PARTNERSHIP</span>
+            <div class="gallery-title">Academic MoU Signing Ceremony</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/field_ai.jpg" alt="Hardware Rack">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">INFRASTRUCTURE</span>
+            <div class="gallery-title">GPU Compute Workstation Setup</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/project1.jpg" alt="Autonomous Flight Test">
+          <div class="gallery-overlay">
+            <span class="gallery-cat">TESTBED</span>
+            <div class="gallery-title">Indoor Drone Flight Obstacle Test</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+          </a>
+          <p>Mogadishu's premier AI education, research, and innovation ecosystem.</p>
+          <div class="social-icons-wrap">
+            <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="programs.html">AI Programs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Details</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Wadajir, KM4, Mogadishu, Somalia</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> 0616434302 / +252 61 6434302</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> ftimfatima85@gmail.com</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Arkaan AI Center. All rights reserved.</div>
+      </div>
+    </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <a href="https://wa.me/252616434302" target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-whatsapp-tooltip">Chat with Arkaan AI</span>
+  </a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
