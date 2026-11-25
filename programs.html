@@ -3,103 +3,293 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arkaan AI Center - Programs & Courses</title>
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <title>Programs & Courses – Arkaan AI Center</title>
+  <link rel="stylesheet" href="css/style.css?v=4" />
+  <style>
+    /* ---- Page Hero ---- */
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+      padding: 120px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 30% 50%, rgba(37,99,235,.2) 0%, transparent 70%);
+    }
+    .page-hero .breadcrumb { color: var(--teal); font-size:.9rem; margin-bottom:12px; letter-spacing:.5px; }
+    .page-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem,5vw,3rem); color:#fff; margin-bottom:16px; }
+    .page-hero p  { color:rgba(255,255,255,.75); max-width:620px; margin:0 auto; font-size:1.1rem; }
+
+    /* ---- Filter Tabs ---- */
+    .filter-tabs { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:48px; }
+    .filter-tab { padding:10px 24px; border-radius:999px; border:2px solid var(--border-color); background:#fff; color:var(--muted-text); font-weight:600; cursor:pointer; transition:.2s; font-size:.9rem; }
+    .filter-tab.active, .filter-tab:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
+
+    /* ---- Program Cards ---- */
+    .programs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:32px; }
+    .program-card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:var(--shadow-md); transition: transform .3s, box-shadow .3s; display:flex; flex-direction:column; }
+    .program-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); }
+    .program-card img { width:100%; height:200px; object-fit:cover; transition: transform .4s; }
+    .program-card:hover img { transform:scale(1.05); }
+    .program-card .card-img-wrap { overflow:hidden; }
+    .program-card .card-body { padding:24px; flex:1; display:flex; flex-direction:column; }
+    .program-card .card-tag { display:inline-block; background:rgba(20,184,166,.12); color:var(--teal); font-size:.78rem; font-weight:700; padding:4px 12px; border-radius:999px; margin-bottom:12px; text-transform:uppercase; letter-spacing:.5px; }
+    .program-card h3 { font-family:var(--font-heading); color:var(--navy); font-size:1.2rem; margin-bottom:10px; }
+    .program-card p { color:var(--muted-text); font-size:.93rem; line-height:1.7; flex:1; }
+    .program-card .card-meta { display:flex; gap:16px; margin:16px 0; font-size:.85rem; color:var(--muted-text); }
+    .program-card .card-meta span { display:flex; align-items:center; gap:6px; }
+    .program-card .card-footer { display:flex; align-items:center; justify-content:space-between; padding:16px 24px; border-top:1px solid var(--border-color); background:var(--light-bg); }
+    .program-card .card-footer .duration { font-weight:700; color:var(--navy); font-size:.88rem; }
+    .program-card .card-footer a { background:var(--navy); color:#fff; padding:9px 20px; border-radius:8px; font-size:.88rem; font-weight:600; transition:.2s; }
+    .program-card .card-footer a:hover { background:var(--teal); }
+
+    /* ---- Why Learn Here ---- */
+    .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; margin-top:48px; }
+    .why-item { text-align:center; padding:32px 20px; background:#fff; border-radius:16px; box-shadow:var(--shadow-sm); }
+    .why-item .wi-icon { font-size:2.4rem; margin-bottom:14px; }
+    .why-item h4 { font-family:var(--font-heading); color:var(--navy); margin-bottom:8px; }
+    .why-item p  { color:var(--muted-text); font-size:.9rem; line-height:1.65; }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Navigation -->
   <nav>
     <div class="container">
-      <div class="logo">Arkaan AI Center</div>
-      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-badge">⚡ AI</span>
+          <span>Arkaan AI Center</span>
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
+        <li><a href="programs.html" class="active">Programs</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#news">News</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="register.html" class="cta-button">Register Now</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="container" style="padding:80px 0;">
-    <h1 style="font-family:var(--font-heading);font-size:var(--h1-size);color:var(--navy);margin-bottom:30px;">Programs & Courses</h1>
-    <div class="row">
-      <!-- AI Fundamentals -->
-      <div class="col" id="ai-fundamentals">
-        <div class="course-card">
-          <img src="images/course_ai.jpg" alt="AI Fundamentals" />
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">🏠 Home / Programs & Courses</div>
+      <h1>Programs & Courses</h1>
+      <p>Industry-aligned AI and technology training programs designed to transform you from beginner to professional.</p>
+    </div>
+  </div>
+
+  <!-- Programs Grid -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2>Explore Our Training Programs</h2>
+        <p>Hands-on programs taught by industry experts, designed for all skill levels.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <div class="filter-tab active">All Programs</div>
+        <div class="filter-tab">Artificial Intelligence</div>
+        <div class="filter-tab">Data Science</div>
+        <div class="filter-tab">Robotics</div>
+        <div class="filter-tab">Web & Tech</div>
+      </div>
+
+      <div class="programs-grid">
+
+        <!-- AI Fundamentals -->
+        <div class="program-card" id="ai-fundamentals">
+          <div class="card-img-wrap">
+            <img src="images/course_ai.jpg" alt="AI Fundamentals Program" />
+          </div>
           <div class="card-body">
+            <span class="card-tag">Beginner</span>
             <h3>AI Fundamentals</h3>
-            <p>Core concepts of artificial intelligence, including search, logic, and neural networks.</p>
-            <a href="register.html" class="learn-more">Enroll Now</a>
+            <p>Core concepts of artificial intelligence including search algorithms, logic, neural network basics, and real-world AI applications. Perfect starting point for new learners.</p>
+            <div class="card-meta">
+              <span>📅 8 Weeks</span>
+              <span>👤 Beginner</span>
+              <span>🏆 Certificate</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="duration">⏱ 8 Weeks</span>
+            <a href="register.html?course=ai-fundamentals">Enroll Now</a>
           </div>
         </div>
-      </div>
-      <!-- Artificial Intelligence -->
-      <div class="col" id="artificial-intelligence">
-        <div class="course-card">
-          <img src="images/course_artificial.jpg" alt="Artificial Intelligence" />
+
+        <!-- Artificial Intelligence -->
+        <div class="program-card" id="artificial-intelligence">
+          <div class="card-img-wrap">
+            <img src="images/course_artificial.jpg" alt="Artificial Intelligence Advanced Program" />
+          </div>
           <div class="card-body">
+            <span class="card-tag">Advanced</span>
             <h3>Artificial Intelligence</h3>
-            <p>Advanced AI techniques, deep learning, and real‑world applications.</p>
-            <a href="register.html" class="learn-more">Enroll Now</a>
+            <p>Advanced AI techniques including deep learning architectures, reinforcement learning, computer vision, and large language models with real-world project work.</p>
+            <div class="card-meta">
+              <span>📅 12 Weeks</span>
+              <span>👤 Intermediate</span>
+              <span>🏆 Certificate</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="duration">⏱ 12 Weeks</span>
+            <a href="register.html?course=artificial-intelligence">Enroll Now</a>
           </div>
         </div>
-      </div>
-      <!-- Machine Learning -->
-      <div class="col" id="machine-learning">
-        <div class="course-card">
-          <img src="images/course_ml.jpg" alt="Machine Learning" />
+
+        <!-- Machine Learning -->
+        <div class="program-card" id="machine-learning">
+          <div class="card-img-wrap">
+            <img src="images/course_ml.jpg" alt="Machine Learning Program" />
+          </div>
           <div class="card-body">
+            <span class="card-tag">Intermediate</span>
             <h3>Machine Learning</h3>
-            <p>Hands‑on labs with Python, scikit‑learn, and TensorFlow for predictive modeling.</p>
-            <a href="register.html" class="learn-more">Enroll Now</a>
+            <p>Hands-on training with Python, scikit-learn, and TensorFlow. Build predictive models, classification systems, and clustering algorithms with real datasets.</p>
+            <div class="card-meta">
+              <span>📅 10 Weeks</span>
+              <span>👤 Intermediate</span>
+              <span>🏆 Certificate</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="duration">⏱ 10 Weeks</span>
+            <a href="register.html?course=machine-learning">Enroll Now</a>
           </div>
         </div>
-      </div>
-      <!-- Data Analytics -->
-      <div class="col" id="data-analytics">
-        <div class="course-card">
-          <img src="images/course_data.jpg" alt="Data Analytics" />
+
+        <!-- Data Analytics -->
+        <div class="program-card" id="data-analytics">
+          <div class="card-img-wrap">
+            <img src="images/course_data.jpg" alt="Data Analytics Program" />
+          </div>
           <div class="card-body">
+            <span class="card-tag">Beginner</span>
             <h3>Data Analytics</h3>
-            <p>Data cleaning, visualization, and statistical analysis using modern tools.</p>
-            <a href="register.html" class="learn-more">Enroll Now</a>
+            <p>Learn data cleaning, visualization, and statistical analysis using Python, Pandas, Matplotlib, and Power BI. Turn raw data into actionable business insights.</p>
+            <div class="card-meta">
+              <span>📅 8 Weeks</span>
+              <span>👤 Beginner</span>
+              <span>🏆 Certificate</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="duration">⏱ 8 Weeks</span>
+            <a href="register.html?course=data-analytics">Enroll Now</a>
           </div>
         </div>
-      </div>
-      <!-- Web Development -->
-      <div class="col" id="web-development">
-        <div class="course-card">
-          <img src="images/course_web.jpg" alt="Web Development" />
+
+        <!-- Web Development -->
+        <div class="program-card" id="web-development">
+          <div class="card-img-wrap">
+            <img src="images/course_web.jpg" alt="Web Development Program" />
+          </div>
           <div class="card-body">
+            <span class="card-tag">Beginner</span>
             <h3>Web Development</h3>
-            <p>Full‑stack JavaScript, responsive design, and cloud deployment techniques.</p>
-            <a href="register.html" class="learn-more">Enroll Now</a>
+            <p>Full-stack JavaScript development covering HTML, CSS, React, Node.js, and cloud deployment. Build modern, responsive web applications from scratch.</p>
+            <div class="card-meta">
+              <span>📅 12 Weeks</span>
+              <span>👤 Beginner</span>
+              <span>🏆 Certificate</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="duration">⏱ 12 Weeks</span>
+            <a href="register.html?course=web-development">Enroll Now</a>
           </div>
         </div>
-      </div>
-      <!-- Other Technologies -->
-      <div class="col" id="other-tech">
-        <div class="course-card">
-          <img src="images/course_other.jpg" alt="Other Technologies" />
-          <div class="card-body">
-            <h3>Other Technologies</h3>
-            <p>Explore robotics, IoT, blockchain, and emerging AI fields.</p>
-            <a href="register.html" class="learn-more">Enroll Now</a>
+
+        <!-- Other Technologies -->
+        <div class="program-card" id="other-tech">
+          <div class="card-img-wrap">
+            <img src="images/course_other.jpg" alt="Other Technologies Program" />
           </div>
+          <div class="card-body">
+            <span class="card-tag">All Levels</span>
+            <h3>Other Technologies</h3>
+            <p>Explore robotics, IoT, blockchain, and emerging AI fields. Practical workshops on cutting-edge technologies shaping the digital future of Africa.</p>
+            <div class="card-meta">
+              <span>📅 6 Weeks</span>
+              <span>👤 All Levels</span>
+              <span>🏆 Certificate</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="duration">⏱ 6 Weeks</span>
+            <a href="register.html?course=other-tech">Enroll Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Learn Here -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Arkaan</span>
+        <h2>Why Learn Here?</h2>
+        <p>We provide more than just education — we build careers, connections, and confidence.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="wi-icon">🧪</div>
+          <h4>Hands-On Labs</h4>
+          <p>Every program includes practical lab sessions where you build real projects, not just theory.</p>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon">👨‍🏫</div>
+          <h4>Expert Mentors</h4>
+          <p>Learn from AI researchers, software engineers, and industry professionals with real-world experience.</p>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon">🏆</div>
+          <h4>Certificates</h4>
+          <p>Earn recognized certificates upon completion that enhance your professional profile and career prospects.</p>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon">🤝</div>
+          <h4>Community</h4>
+          <p>Join a thriving community of learners, alumni, and technology enthusiasts across Somalia.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="section bg-navy" style="text-align:center;">
+    <div class="container">
+      <h2 style="font-family:var(--font-heading);color:#fff;font-size:var(--h2-size);margin-bottom:16px;">Ready to Start Your AI Journey?</h2>
+      <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 32px;">Pick a program, register today, and take the first step toward becoming an AI professional.</p>
+      <a href="register.html" class="btn btn-primary" style="margin-right:14px;">Register Now</a>
+      <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4);">Ask a Question</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="container footer-container">
       <div class="footer-col">
-        <h4>Arkaan AI Center</h4>
-        <p>Empowering the next generation of AI innovators.</p>
+        <h4><span class="logo-badge">⚡ AI</span> Arkaan AI Center</h4>
+        <p>Empowering the next generation of AI innovators in Somalia and beyond.</p>
+        <p style="margin-top:12px;">📍 Wadajir, KM4, Mogadishu, Somalia</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -113,19 +303,21 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>Phone: <a href="tel:0616434302">0616434302</a></p>
-        <p>Email: <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+        <p>📞 <a href="tel:0616434302">0616434302</a></p>
+        <p>✉️ <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+        <p>📍 Wadajir, KM4, Mogadishu</p>
       </div>
       <div class="footer-col">
         <h4>Follow Us</h4>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook">&#x1F426;</a>
-          <a href="#" aria-label="Twitter">&#x1F426;</a>
-          <a href="#" aria-label="LinkedIn">&#x1F426;</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="YouTube">📺</a>
         </div>
       </div>
     </div>
-    <div class="copyright">© 2026 Arkaan AI Center. All rights reserved.</div>
+    <div class="copyright">© 2026 Arkaan AI Center. All rights reserved. | Wadajir, KM4, Mogadishu, Somalia</div>
   </footer>
 
   <script src="js/main.js"></script>
