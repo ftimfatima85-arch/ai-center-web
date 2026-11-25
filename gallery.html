@@ -7,62 +7,71 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
   <!-- Site Header -->
+    <!-- =========================================================================
+       1. HEADER & RIGHT-SIDE HAMBURGER MENU (No links in front, No Join Us)
+  ========================================================================== -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="logo-wrapper">
-        <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+        <div class="logo-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
         <div class="logo-text">
           <div class="logo-title">arkaan<span>.ai</span></div>
           <div class="logo-subtitle">AI & Technology Center</div>
         </div>
       </a>
 
-      <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="programs.html">AI Programs</a>
-        <a href="projects.html">Projects</a>
-        <a href="news.html">News & Updates</a>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
+      <!-- Right-side Hamburger Menu Button (No front links, No Join Us) -->
       <div class="nav-actions">
-        <a href="register.html" class="btn btn-primary btn-sm">Join Us</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
-          <i class="fa-solid fa-bars"></i>
+          <span>Menu</span> <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Right-side Slide-out Navigation Drawer (Only the 8 items, No Join Us) -->
   <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
   <aside class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div class="mobile-drawer-header">
         <div class="logo-wrapper">
-          <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
-          <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+          <div class="logo-icon">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div class="logo-text">
+            <div class="logo-title">arkaan<span>.ai</span></div>
+          </div>
         </div>
-        <button class="close-drawer-btn" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+        <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
+
       <nav class="mobile-menu-links">
-        <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="about.html">About Us <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="services.html">Services <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="programs.html">AI Programs <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="news.html">News & Updates <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html" >Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="about.html" >About Us <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="services.html" >Services <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="programs.html" >AI Programs <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="projects.html" >Projects <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="news.html" >News & Updates <i class="fa-solid fa-chevron-right"></i></a>
         <a href="gallery.html" class="active">Gallery <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="contact.html" >Contact <i class="fa-solid fa-chevron-right"></i></a>
       </nav>
+    </div>
+
+    <div>
+      <div class="social-icons-wrap" style="justify-content:center; padding-top:20px;">
+        <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
     </div>
   </aside>
 
