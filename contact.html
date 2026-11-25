@@ -2,26 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Location – Arkaan AI Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact &amp; Campus Location – Arkaan AI Center</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 <body>
 
-  <!-- Site Header -->
-    <!-- =========================================================================
-       1. HEADER & RIGHT-SIDE HAMBURGER MENU (No links in front, No Join Us)
-  ========================================================================== -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo-wrap">
-        <img src="images/arkaan_logo.png" alt="Arkaan — Bridging the Gap" class="brand-logo-img">
+        <img src="images/arkaan_logo.png" alt="Arkaan AI Center" class="brand-logo-img">
       </a>
-
-      <!-- Right-side Hamburger Menu Button (No front links, No Join Us) -->
       <div class="nav-actions">
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
           <span>Menu</span> <i class="fa-solid fa-bars"></i>
@@ -30,160 +26,114 @@
     </div>
   </header>
 
-  <!-- Right-side Slide-out Navigation Drawer (Only the 8 items, No Join Us) -->
   <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
   <aside class="mobile-nav-drawer" id="mobileDrawer">
     <div>
       <div class="mobile-drawer-header">
-        <div class="logo-wrapper">
-          <div class="logo-icon">
-            <i class="fa-solid fa-brain"></i>
-          </div>
-          <div class="logo-text">
-            <div class="logo-title">arkaan<span>.ai</span></div>
-          </div>
+        <div class="brand-logo-wrap">
+          <img src="images/arkaan_logo.png" alt="Arkaan AI Center" style="height:44px; filter:brightness(0) invert(1);">
         </div>
         <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Menu">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-
       <nav class="mobile-menu-links">
-        <a href="index.html" >Home <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="about.html" >About Us <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="services.html" >Services <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="programs.html" >AI Programs <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="projects.html" >Projects <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="news.html" >News & Updates <i class="fa-solid fa-chevron-right"></i></a>
-        <a href="gallery.html" >Gallery <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="about.html">About Us <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="services.html">Services <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="programs.html">AI Programs <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="news.html">News &amp; Updates <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="gallery.html">Gallery <i class="fa-solid fa-chevron-right"></i></a>
         <a href="contact.html" class="active">Contact <i class="fa-solid fa-chevron-right"></i></a>
       </nav>
     </div>
-
     <div>
       <div class="social-icons-wrap" style="justify-content:center; padding-top:20px;">
-        <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
   </aside>
 
-  <!-- Page Hero -->
-  <section class="page-hero-banner">
+  <section class="inner-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html" style="color:var(--cyan);">Home</a>
-        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
-        <span>Contact & Advisory</span>
-      </div>
+      <span class="hero-tagline">DIRECT ENGAGEMENT</span>
       <h1>Contact Arkaan AI Center</h1>
-      <p>Have an inquiry regarding student admissions, corporate advisory, or institutional partnership? Our team in Mogadishu is here to assist.</p>
+      <p>Have an institutional inquiry, research proposal, or questions about training programs? We are here to help.</p>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="section bg-light">
+  <section class="section bg-white" id="contact">
     <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:50px; align-items:start;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;">
         
-        <!-- Contact Information Cards -->
         <div>
-          <h2 style="font-family:var(--font-heading); color:var(--navy); font-size:1.8rem; margin-bottom:12px;">Get in Touch</h2>
-          <p style="color:var(--muted-text); margin-bottom:32px;">Connect directly through our official campus channels or schedule an on-site visit.</p>
+          <span class="section-tag">Campus &amp; Office</span>
+          <h2 class="section-title">Wadajir, KM4, Mogadishu</h2>
+          <p class="section-subtitle" style="margin-bottom:30px;">
+            Our center is open Sunday through Thursday from 8:00 AM to 5:00 PM.
+          </p>
 
           <div style="display:flex; flex-direction:column; gap:20px; margin-bottom:30px;">
-            <div class="service-card" style="padding:22px; flex-direction:row; align-items:center; gap:20px;">
-              <div class="service-icon" style="margin-bottom:0; width:50px; height:50px; font-size:1.3rem;"><i class="fa-solid fa-location-dot"></i></div>
+            <div style="display:flex; align-items:flex-start; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:10px; background:var(--white-muted); color:var(--navy-primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
               <div>
-                <h4 style="font-family:var(--font-heading); color:var(--navy); margin-bottom:4px; font-size:1.05rem;">Physical Location</h4>
-                <p style="margin:0; font-size:0.92rem; color:var(--muted-text);">Wadajir District, KM4, Mogadishu, Somalia</p>
+                <h4 style="font-family:var(--font-heading); color:var(--navy-deep); margin-bottom:4px;">Address</h4>
+                <p style="color:var(--muted-text); font-size:0.95rem;">Wadajir District, KM4, Mogadishu, Somalia</p>
               </div>
             </div>
 
-            <div class="service-card" style="padding:22px; flex-direction:row; align-items:center; gap:20px;">
-              <div class="service-icon" style="margin-bottom:0; width:50px; height:50px; font-size:1.3rem;"><i class="fa-solid fa-phone"></i></div>
+            <div style="display:flex; align-items:flex-start; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:10px; background:var(--white-muted); color:var(--navy-primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">
+                <i class="fa-solid fa-phone"></i>
+              </div>
               <div>
-                <h4 style="font-family:var(--font-heading); color:var(--navy); margin-bottom:4px; font-size:1.05rem;">Direct Phone & WhatsApp</h4>
-                <p style="margin:0; font-size:0.92rem; color:var(--muted-text);">
-                  <a href="tel:0616434302" style="color:var(--blue-primary); font-weight:600;">0616434302</a> / 
-                  <a href="tel:+252616434302" style="color:var(--blue-primary); font-weight:600;">+252 61 6434302</a>
+                <h4 style="font-family:var(--font-heading); color:var(--navy-deep); margin-bottom:4px;">Direct Phone Lines</h4>
+                <p style="color:var(--muted-text); font-size:0.95rem;">
+                  <a href="tel:0616434302">0616434302</a> / 
+                  <a href="tel:+252616434302">+252 61 6434302</a>
                 </p>
               </div>
             </div>
 
-            <div class="service-card" style="padding:22px; flex-direction:row; align-items:center; gap:20px;">
-              <div class="service-icon" style="margin-bottom:0; width:50px; height:50px; font-size:1.3rem;"><i class="fa-solid fa-envelope"></i></div>
+            <div style="display:flex; align-items:flex-start; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:10px; background:var(--white-muted); color:var(--navy-primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
               <div>
-                <h4 style="font-family:var(--font-heading); color:var(--navy); margin-bottom:4px; font-size:1.05rem;">Official Email</h4>
-                <p style="margin:0; font-size:0.92rem; color:var(--muted-text);">
-                  <a href="mailto:ftimfatima85@gmail.com" style="color:var(--blue-primary); font-weight:600;">ftimfatima85@gmail.com</a>
+                <h4 style="font-family:var(--font-heading); color:var(--navy-deep); margin-bottom:4px;">Official Email</h4>
+                <p style="color:var(--muted-text); font-size:0.95rem;">
+                  <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a>
                 </p>
               </div>
             </div>
 
-            <div class="service-card" style="padding:22px; flex-direction:row; align-items:center; gap:20px;">
-              <div class="service-icon" style="margin-bottom:0; width:50px; height:50px; font-size:1.3rem;"><i class="fa-solid fa-clock"></i></div>
+            <div style="display:flex; align-items:flex-start; gap:16px;">
+              <div style="width:44px; height:44px; border-radius:10px; background:var(--white-muted); color:var(--navy-primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
               <div>
-                <h4 style="font-family:var(--font-heading); color:var(--navy); margin-bottom:4px; font-size:1.05rem;">Working Hours</h4>
-                <p style="margin:0; font-size:0.92rem; color:var(--muted-text);">Saturday – Thursday: 8:00 AM – 6:00 PM (Friday Closed)</p>
+                <h4 style="font-family:var(--font-heading); color:var(--navy-deep); margin-bottom:4px;">WhatsApp Direct</h4>
+                <p style="color:var(--muted-text); font-size:0.95rem;">
+                  <a href="https://wa.me/252616434302" target="_blank" style="color:var(--whatsapp); font-weight:700;">+252 61 6434302 (Open Chat)</a>
+                </p>
               </div>
             </div>
-          </div>
-
-          <!-- Maps Embed -->
-          <div style="border-radius:18px; overflow:hidden; box-shadow:var(--shadow-md); height:280px;">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.3!2d45.318889!3d2.037222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDInMTQuMCJOIDQ1wrAxOScwOC4wIkU!5e0!3m2!1sen!2sso!4v1699999999999!5m2!1sen!2sso" 
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
-              title="Arkaan AI Center Map">
-            </iframe>
           </div>
         </div>
 
-        <!-- Interactive Contact Form -->
-        <div class="admin-card">
-          <h3 style="font-family:var(--font-heading); color:var(--navy); font-size:1.5rem; margin-bottom:8px;">Send a Message</h3>
-          <p style="color:var(--muted-text); font-size:0.95rem; margin-bottom:28px;">Our faculty or admissions representative will respond within 24 business hours.</p>
-
-          <form id="contactInquiryForm">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-              <div class="form-group">
-                <label for="contactName">Your Full Name *</label>
-                <input type="text" id="contactName" class="form-control" placeholder="e.g. Hassan Nuur" required>
-              </div>
-              <div class="form-group">
-                <label for="contactPhone">Phone / WhatsApp *</label>
-                <input type="tel" id="contactPhone" class="form-control" placeholder="+252 61 ..." required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="contactEmail">Email Address *</label>
-              <input type="email" id="contactEmail" class="form-control" placeholder="yourname@domain.com" required>
-            </div>
-
-            <div class="form-group">
-              <label for="contactSubject">Subject / Area of Interest</label>
-              <select id="contactSubject" class="form-control">
-                <option value="admissions">Course Admissions & Enrollment</option>
-                <option value="corporate">Corporate AI Advisory & Training</option>
-                <option value="partnership">Academic Partnership / Research</option>
-                <option value="media">Press & Media Inquiry</option>
-                <option value="general">General Information</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="contactMessage">Your Message *</label>
-              <textarea id="contactMessage" class="form-control" rows="5" placeholder="How can Arkaan AI Center assist your goals?" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width:100%;">
-              <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
-            </button>
-            <div id="contactFormAlert" style="display:none; margin-top:16px; padding:12px; border-radius:8px; font-size:0.9rem; text-align:center;"></div>
-          </form>
+        <div>
+          <div style="border-radius:20px; overflow:hidden; box-shadow:var(--shadow-lg); height:420px;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.3!2d45.318889!3d2.037222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDInMTQuMCJOIDQ1wrAxOScwOC4wIkU!5e0!3m2!1sen!2sso!4v1699999999999!5m2!1sen!2sso" 
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+              title="Arkaan Location Map">
+            </iframe>
+          </div>
         </div>
 
       </div>
@@ -196,14 +146,9 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo-wrap">
-        <img src="images/arkaan_logo.png" alt="Arkaan — Bridging the Gap" class="brand-logo-img">
-      </a>
-          <p>Mogadishu's premier AI education, research, and innovation ecosystem.</p>
-          <div class="social-icons-wrap">
-            <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
+            <img src="images/arkaan_logo.png" alt="Arkaan AI Center" style="height:48px; filter:brightness(0) invert(1);">
+          </a>
+          <p>Empowering AI Leadership. Building Somalia's Digital Future. Bridging human talent with intelligent technology across the Horn of Africa.</p>
         </div>
         <div>
           <h4 class="footer-heading">Navigation</h4>
@@ -212,37 +157,38 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="programs.html">AI Programs</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="footer-heading">Contact Details</h4>
-          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Wadajir, KM4, Mogadishu, Somalia</div>
-          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> 0616434302 / +252 61 6434302</div>
-          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> ftimfatima85@gmail.com</div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="news.html">News &amp; Insights</a></li>
+            <li><a href="contact.html">Support &amp; Inquiries</a></li>
+            <li><a href="admin.html">News Management (Admin)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Headquarters</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><div>Wadajir, KM4, Mogadishu, Somalia</div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><div><a href="tel:0616434302">0616434302</a> / <a href="tel:+252616434302">+252 61 6434302</a></div></div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><div><a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></div></div>
         </div>
       </div>
       <div class="footer-bottom">
         <div>© 2026 Arkaan AI Center. All rights reserved.</div>
+        <div>Reference: <a href="http://arkaan.so/" target="_blank" style="color:#93C5FD;">arkaan.so</a></div>
       </div>
     </div>
   </footer>
 
-  <a href="https://wa.me/252616434302" target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/252616434302?text=Hello%20Arkaan%20AI%20Center!%20I%20would%20like%20more%20information." target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
-    <span class="floating-whatsapp-tooltip">Chat with Arkaan AI</span>
+    <span class="floating-whatsapp-tooltip">Chat with Arkaan</span>
   </a>
 
+  <script src="js/news-data.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('contactInquiryForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const alertBox = document.getElementById('contactFormAlert');
-      alertBox.style.display = 'block';
-      alertBox.style.background = '#DCFCE7';
-      alertBox.style.color = '#15803D';
-      alertBox.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. We will reply shortly.';
-      this.reset();
-    });
-  </script>
 </body>
 </html>
