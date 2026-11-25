@@ -3,63 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arkaan AI Center - Registration</title>
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <title>Register Now – Arkaan AI Center</title>
+  <link rel="stylesheet" href="css/style.css?v=4" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+      padding: 120px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 20% 50%, rgba(20,184,166,.2) 0%, transparent 70%);
+    }
+    .page-hero .breadcrumb { color: var(--teal); font-size:.9rem; margin-bottom:12px; }
+    .page-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem,5vw,3rem); color:#fff; margin-bottom:16px; }
+    .page-hero p  { color:rgba(255,255,255,.75); max-width:620px; margin:0 auto; font-size:1.1rem; }
+
+    /* Register layout */
+    .register-layout { display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:start; }
+
+    /* Form */
+    .register-form-wrap { background:#fff; border-radius:20px; padding:44px; box-shadow:var(--shadow-lg); }
+    .register-form-wrap h3 { font-family:var(--font-heading); color:var(--navy); font-size:1.6rem; margin-bottom:8px; }
+    .register-form-wrap > p { color:var(--muted-text); margin-bottom:30px; }
+
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .form-group { margin-bottom:20px; }
+    .form-group label { display:block; font-weight:600; color:var(--navy); margin-bottom:8px; font-size:.9rem; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width:100%; padding:13px 16px; border:1.5px solid var(--border-color); border-radius:10px;
+      font-size:.95rem; font-family:var(--font-body); transition: border-color .2s, box-shadow .2s;
+      outline:none; background:#fff; color:var(--dark-text);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(37,99,235,.1); }
+    .submit-btn { width:100%; padding:16px; background:linear-gradient(135deg,var(--blue),var(--navy)); color:#fff; border:none; border-radius:12px; font-size:1.05rem; font-weight:700; font-family:var(--font-heading); cursor:pointer; transition:.3s; letter-spacing:.3px; }
+    .submit-btn:hover { opacity:.9; transform:translateY(-2px); }
+    #formMessage { margin-top:14px; padding:14px; border-radius:10px; font-weight:600; text-align:center; }
+    #formMessage.success { background:rgba(20,184,166,.12); color:var(--teal); }
+    #formMessage.error   { background:rgba(239,68,68,.1); color:#EF4444; }
+
+    /* Sidebar info */
+    .register-info { display:flex; flex-direction:column; gap:20px; }
+    .ri-card { background:#fff; border-radius:16px; padding:28px; box-shadow:var(--shadow-md); border-left:4px solid var(--teal); }
+    .ri-card h4 { font-family:var(--font-heading); color:var(--navy); margin-bottom:10px; font-size:1.05rem; }
+    .ri-card p  { color:var(--muted-text); font-size:.9rem; line-height:1.7; }
+    .ri-card ul { color:var(--muted-text); font-size:.9rem; line-height:1.9; padding-left:16px; }
+
+    /* Steps */
+    .steps-wrap { margin-top:10px; }
+    .step-item { display:flex; gap:16px; align-items:flex-start; margin-bottom:20px; }
+    .step-num { width:36px; height:36px; background:var(--navy); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.9rem; flex-shrink:0; }
+    .step-item .step-text h5 { font-family:var(--font-heading); color:var(--navy); margin-bottom:4px; }
+    .step-item .step-text p  { color:var(--muted-text); font-size:.88rem; }
+
+    @media(max-width:900px){
+      .register-layout { grid-template-columns:1fr; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Navigation -->
   <nav>
     <div class="container">
-      <div class="logo">Arkaan AI Center</div>
-      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+      <div class="logo">
+        <a href="index.html">
+          <span class="logo-badge">⚡ AI</span>
+          <span>Arkaan AI Center</span>
+        </a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#news">News</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="register.html" class="cta-button">Register Now</a></li>
+        <li><a href="register.html" class="cta-button active">Register Now</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="container" style="padding:80px 0;">
-    <h1 style="font-family:var(--font-heading);font-size:var(--h1-size);color:var(--navy);margin-bottom:30px;">Register for a Course</h1>
-    <form id="registrationForm">
-      <div class="form-group">
-        <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" required />
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">🏠 Home / Register</div>
+      <h1>Register for a Program</h1>
+      <p>Take the first step toward your AI career. Fill in the form below to secure your spot.</p>
+    </div>
+  </div>
+
+  <!-- Register Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="register-layout">
+
+        <!-- Form -->
+        <div class="register-form-wrap">
+          <h3>🎓 Enrollment Form</h3>
+          <p>All fields marked with * are required. We'll contact you within 48 hours to confirm your enrollment.</p>
+
+          <form id="registrationForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Your age" min="10" max="100" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+252 ..." required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="course">Select Program *</label>
+              <select id="course" name="course" required>
+                <option value="" disabled selected>Choose a program</option>
+                <option value="ai-fundamentals">AI Fundamentals (8 weeks)</option>
+                <option value="artificial-intelligence">Artificial Intelligence – Advanced (12 weeks)</option>
+                <option value="machine-learning">Machine Learning (10 weeks)</option>
+                <option value="data-analytics">Data Analytics (8 weeks)</option>
+                <option value="web-development">Web Development (12 weeks)</option>
+                <option value="other-tech">Other Technologies (6 weeks)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="experience">Current Experience Level</label>
+              <select id="experience" name="experience">
+                <option value="">Select your level</option>
+                <option value="beginner">Beginner – No prior experience</option>
+                <option value="some">Some experience – Basic coding/tech</option>
+                <option value="intermediate">Intermediate – Familiar with programming</option>
+                <option value="advanced">Advanced – Strong technical background</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="motivation">Why do you want to join? (Optional)</label>
+              <textarea id="motivation" name="motivation" placeholder="Tell us your motivation and goals..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">🚀 Submit Registration</button>
+            <div id="formMessage"></div>
+          </form>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="register-info">
+
+          <!-- How it works -->
+          <div class="ri-card">
+            <h4>📋 How Registration Works</h4>
+            <div class="steps-wrap">
+              <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-text">
+                  <h5>Submit Form</h5>
+                  <p>Fill in and submit this registration form with your details.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">2</div>
+                <div class="step-text">
+                  <h5>Confirmation Call</h5>
+                  <p>Our team will call you within 48 hours to confirm your enrollment and answer questions.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-text">
+                  <h5>Orientation Day</h5>
+                  <p>Attend our orientation session at the center in KM4, Mogadishu.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-num">4</div>
+                <div class="step-text">
+                  <h5>Start Learning</h5>
+                  <p>Begin your program and start your journey toward becoming an AI professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Who can join -->
+          <div class="ri-card">
+            <h4>👥 Who Can Join?</h4>
+            <ul>
+              <li>Students aged 15 and above</li>
+              <li>University students and graduates</li>
+              <li>Working professionals seeking to upskill</li>
+              <li>Anyone passionate about technology and AI</li>
+              <li>No prior coding experience required for beginner courses</li>
+            </ul>
+          </div>
+
+          <!-- Contact for questions -->
+          <div class="ri-card">
+            <h4>❓ Questions?</h4>
+            <p>Contact us directly if you need help choosing the right program or have any questions.</p>
+            <p style="margin-top:12px;"><strong>📞</strong> <a href="tel:0616434302" style="color:var(--blue);">0616434302</a></p>
+            <p style="margin-top:6px;"><strong>✉️</strong> <a href="mailto:ftimfatima85@gmail.com" style="color:var(--blue);">ftimfatima85@gmail.com</a></p>
+            <p style="margin-top:6px;"><strong>📍</strong> Wadajir, KM4, Mogadishu, Somalia</p>
+          </div>
+
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div class="form-group">
-        <label for="course">Course Selection</label>
-        <select id="course" name="course" required>
-          <option value="" disabled selected>Select a program</option>
-          <option value="ai-fundamentals">AI Fundamentals</option>
-          <option value="artificial-intelligence">Artificial Intelligence</option>
-          <option value="machine-learning">Machine Learning</option>
-          <option value="data-analytics">Data Analytics</option>
-          <option value="web-development">Web Development</option>
-          <option value="other-tech">Other Technologies</option>
-        </select>
-      </div>
-      <button type="submit">Submit Registration</button>
-      <div id="formMessage" style="margin-top:15px;"></div>
-    </form>
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container footer-container">
       <div class="footer-col">
-        <h4>Arkaan AI Center</h4>
-        <p>Empowering the next generation of AI innovators.</p>
+        <h4><span class="logo-badge">⚡ AI</span> Arkaan AI Center</h4>
+        <p>Empowering the next generation of AI innovators in Somalia and beyond.</p>
+        <p style="margin-top:12px;">📍 Wadajir, KM4, Mogadishu, Somalia</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -73,21 +252,49 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>Phone: <a href="tel:0616434302">0616434302</a></p>
-        <p>Email: <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+        <p>📞 <a href="tel:0616434302">0616434302</a></p>
+        <p>✉️ <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
+        <p>📍 Wadajir, KM4, Mogadishu</p>
       </div>
       <div class="footer-col">
         <h4>Follow Us</h4>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook">&#x1F426;</a>
-          <a href="#" aria-label="Twitter">&#x1F426;</a>
-          <a href="#" aria-label="LinkedIn">&#x1F426;</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="YouTube">📺</a>
         </div>
       </div>
     </div>
-    <div class="copyright">© 2026 Arkaan AI Center. All rights reserved.</div>
+    <div class="copyright">© 2026 Arkaan AI Center. All rights reserved. | Wadajir, KM4, Mogadishu, Somalia</div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name   = document.getElementById('fullName').value.trim();
+      const email  = document.getElementById('email').value.trim();
+      const phone  = document.getElementById('phone').value.trim();
+      const course = document.getElementById('course').value;
+      const fb     = document.getElementById('formMessage');
+
+      if (!name || !email || !phone || !course) {
+        fb.className = 'error';
+        fb.textContent = '⚠️ Please fill in all required fields (Name, Email, Phone, Program).';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        fb.className = 'error';
+        fb.textContent = '⚠️ Please enter a valid email address.';
+        return;
+      }
+      fb.className = 'success';
+      fb.innerHTML = '🎉 <strong>Registration submitted!</strong> Thank you, ' + name +
+        '! Our team will contact you at <strong>' + phone + '</strong> within 48 hours to confirm your enrollment.';
+      this.reset();
+      setTimeout(() => fb.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+    });
+  </script>
 </body>
 </html>
