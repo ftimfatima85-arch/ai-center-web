@@ -1,275 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects & Activities – Arkaan AI Center</title>
-  <link rel="stylesheet" href="css/style.css?v=4" />
-  <style>
-    .page-hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
-      padding: 120px 0 70px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(14,165,233,.2) 0%, transparent 70%);
-    }
-    .page-hero .breadcrumb { color: var(--teal); font-size:.9rem; margin-bottom:12px; }
-    .page-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem,5vw,3rem); color:#fff; margin-bottom:16px; }
-    .page-hero p  { color:rgba(255,255,255,.75); max-width:620px; margin:0 auto; font-size:1.1rem; }
-
-    /* Stats strip */
-    .stats-strip { background:#fff; border-radius:16px; padding:30px 40px; box-shadow:var(--shadow-md); display:flex; justify-content:space-around; flex-wrap:wrap; gap:24px; margin-top:-40px; position:relative; z-index:10; }
-    .stat-item { text-align:center; }
-    .stat-item .num { font-family:var(--font-heading); font-size:2rem; color:var(--navy); font-weight:800; }
-    .stat-item .label { color:var(--muted-text); font-size:.88rem; margin-top:4px; }
-
-    /* Project cards */
-    .projects-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:32px; margin-top:48px; }
-    .project-card { background:#fff; border-radius:18px; overflow:hidden; box-shadow:var(--shadow-md); transition: transform .3s, box-shadow .3s; }
-    .project-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); }
-    .project-card .card-img-wrap { overflow:hidden; position:relative; }
-    .project-card img { width:100%; height:220px; object-fit:cover; transition: transform .4s; }
-    .project-card:hover img { transform:scale(1.06); }
-    .project-card .p-badge { position:absolute; top:16px; left:16px; background:var(--teal); color:#fff; font-size:.75rem; font-weight:700; padding:4px 12px; border-radius:999px; text-transform:uppercase; letter-spacing:.5px; }
-    .project-card .card-body { padding:24px; }
-    .project-card h3 { font-family:var(--font-heading); color:var(--navy); font-size:1.15rem; margin-bottom:10px; }
-    .project-card p { color:var(--muted-text); font-size:.93rem; line-height:1.7; margin-bottom:16px; }
-    .project-card .tech-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
-    .project-card .tech-tag { background:var(--light-bg); color:var(--navy); font-size:.75rem; font-weight:600; padding:4px 12px; border-radius:999px; border:1px solid var(--border-color); }
-    .project-card .view-btn { display:inline-block; background:var(--navy); color:#fff; padding:10px 22px; border-radius:8px; font-weight:600; font-size:.88rem; transition:.2s; }
-    .project-card .view-btn:hover { background:var(--teal); color:#fff; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Prototypes – Arkaan AI Center</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <span class="logo-badge">⚡ AI</span>
-          <span>Arkaan AI Center</span>
-        </a>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+        <div class="logo-text">
+          <div class="logo-title">arkaan<span>.ai</span></div>
+          <div class="logo-subtitle">AI & Technology Center</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="programs.html">AI Programs</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="news.html">News & Updates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="register.html" class="btn btn-primary btn-sm">Join Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="programs.html">Programs</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="index.html#news">News</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="register.html" class="cta-button">Register Now</a></li>
-      </ul>
     </div>
-  </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="logo-wrapper">
+          <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="mobile-menu-links">
+        <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="about.html">About Us <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="services.html">Services <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="programs.html">AI Programs <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="projects.html" class="active">Projects <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="news.html">News & Updates <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="gallery.html">Gallery <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+      </nav>
+    </div>
+  </aside>
 
   <!-- Page Hero -->
-  <div class="page-hero">
+  <section class="page-hero-banner">
     <div class="container">
-      <div class="breadcrumb">🏠 Home / Projects & Activities</div>
-      <h1>Projects & Activities</h1>
-      <p>Explore the cutting-edge AI and technology projects created by our talented students and research teams.</p>
-    </div>
-  </div>
-
-  <!-- Stats Strip -->
-  <section class="section bg-light" style="padding-top:80px;">
-    <div class="container">
-      <div class="stats-strip">
-        <div class="stat-item">
-          <div class="num">40+</div>
-          <div class="label">Completed Projects</div>
-        </div>
-        <div class="stat-item">
-          <div class="num">200+</div>
-          <div class="label">Student Participants</div>
-        </div>
-        <div class="stat-item">
-          <div class="num">6</div>
-          <div class="label">Technology Fields</div>
-        </div>
-        <div class="stat-item">
-          <div class="num">3</div>
-          <div class="label">Competition Awards</div>
-        </div>
+      <div class="breadcrumb">
+        <a href="index.html" style="color:var(--cyan);">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+        <span>Innovation Showcase</span>
       </div>
-
-      <div class="section-header" style="margin-top:70px;">
-        <span class="section-tag">Student Work</span>
-        <h2>Featured Projects</h2>
-        <p>Real projects built by real students — solving real problems in Somalia and beyond.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="card-img-wrap">
-            <img src="images/project1.jpg" alt="Autonomous Drone Navigation" />
-            <span class="p-badge">AI & Robotics</span>
-          </div>
-          <div class="card-body">
-            <h3>Autonomous Drone Navigation</h3>
-            <p>AI-driven path-planning system for indoor drone navigation using reinforcement learning. The drone avoids obstacles and reaches targets autonomously.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Reinforcement Learning</span>
-              <span class="tech-tag">OpenCV</span>
-            </div>
-            <a href="#" class="view-btn">View Project →</a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="card-img-wrap">
-            <img src="images/project2.jpg" alt="AI Customer Support Chatbot" />
-            <span class="p-badge">NLP</span>
-          </div>
-          <div class="card-body">
-            <h3>AI Customer Support Chatbot</h3>
-            <p>Multilingual chatbot with natural language understanding built for 24/7 user assistance. Supports Somali, Arabic, and English languages.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">NLP</span>
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">Node.js</span>
-            </div>
-            <a href="#" class="view-btn">View Project →</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="card-img-wrap">
-            <img src="images/project3.jpg" alt="Real-time Data Analytics Dashboard" />
-            <span class="p-badge">Data Science</span>
-          </div>
-          <div class="card-body">
-            <h3>Real-time Data Analytics Dashboard</h3>
-            <p>Interactive dashboard visualizing live IoT sensor data using D3.js and WebSockets. Monitors environmental conditions in real time.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">D3.js</span>
-              <span class="tech-tag">WebSockets</span>
-              <span class="tech-tag">IoT</span>
-            </div>
-            <a href="#" class="view-btn">View Project →</a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="card-img-wrap">
-            <img src="images/project4.jpg" alt="AI-Controlled Robotic Arm" />
-            <span class="p-badge">Robotics</span>
-          </div>
-          <div class="card-body">
-            <h3>AI-Controlled Robotic Arm</h3>
-            <p>Vision-guided robotic arm using computer vision and inverse kinematics to identify and manipulate objects with high precision.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">Computer Vision</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Kinematics</span>
-            </div>
-            <a href="#" class="view-btn">View Project →</a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="card-img-wrap">
-            <img src="images/field_ml.jpg" alt="Crop Disease Detection" />
-            <span class="p-badge">Machine Learning</span>
-          </div>
-          <div class="card-body">
-            <h3>Crop Disease Detection System</h3>
-            <p>Deep learning model that identifies plant diseases from photos taken by farmers using their smartphones, helping prevent agricultural losses.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">CNN</span>
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">Mobile</span>
-            </div>
-            <a href="#" class="view-btn">View Project →</a>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="card-img-wrap">
-            <img src="images/field_cv.jpg" alt="Smart Traffic Monitoring" />
-            <span class="p-badge">Computer Vision</span>
-          </div>
-          <div class="card-body">
-            <h3>Smart Traffic Monitoring</h3>
-            <p>AI-powered system that monitors and analyzes traffic flow using camera feeds, helping optimize traffic signals and reduce congestion in Mogadishu.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">YOLO</span>
-              <span class="tech-tag">OpenCV</span>
-              <span class="tech-tag">Python</span>
-            </div>
-            <a href="#" class="view-btn">View Project →</a>
-          </div>
-        </div>
-
-      </div>
+      <h1>Featured Projects & Prototypes</h1>
+      <p>Tangible, open-source, and deployed engineering solutions created by students, faculty, and research fellows at Arkaan AI Center.</p>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section bg-navy" style="text-align:center;">
+  <!-- Projects Grid -->
+  <section class="section bg-light">
     <div class="container">
-      <h2 style="font-family:var(--font-heading);color:#fff;font-size:var(--h2-size);margin-bottom:16px;">Want to Build the Next Great Project?</h2>
-      <p style="color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 32px;">Join Arkaan AI Center and get the skills, mentors, and resources to bring your ideas to life.</p>
-      <a href="register.html" class="btn btn-primary" style="margin-right:14px;">Start Learning</a>
-      <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4);">Get in Touch</a>
+      <div class="card-grid-3">
+
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="images/project1.jpg" alt="Autonomous Drone">
+            <span class="news-category-badge" style="background:#0284C7;">ROBOTICS</span>
+          </div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Autonomous Drone Navigation & Obstacle Avoidance</h3>
+            <p class="news-card-desc">An AI-driven UAV navigation system utilizing LiDAR SLAM and real-time computer vision for GPS-denied indoor search and rescue.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Python</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">YOLOv8</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">ROS 2</span>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-card-date">Status: Deployed Testbed</span>
+              <a href="contact.html" class="read-story-link">Project Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="images/project2.jpg" alt="Somali Chatbot">
+            <span class="news-category-badge" style="background:#7C3AED;">NLP / LLM</span>
+          </div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Multilingual Somali AI Support Agent</h3>
+            <p class="news-card-desc">Specialized conversational model fine-tuned on curated regional speech datasets, capable of understanding Somali nuances and English interchangeably.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">HuggingFace</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">FastAPI</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Llama 3</span>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-card-date">Status: Active Pilot</span>
+              <a href="contact.html" class="read-story-link">Project Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="images/project3.jpg" alt="Data Analytics Dashboard">
+            <span class="news-category-badge" style="background:#059669;">DATA SCIENCE</span>
+          </div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Real-Time IoT Environmental Telemetry</h3>
+            <p class="news-card-desc">High-frequency distributed sensor dashboard monitoring urban air quality, soil moisture, and weather trends across Mogadishu districts.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">D3.js</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">WebSockets</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">MQTT</span>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-card-date">Status: Live Feed</span>
+              <a href="contact.html" class="read-story-link">Project Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="images/project4.jpg" alt="Vision Robotic Arm">
+            <span class="news-category-badge" style="background:#EA580C;">EMBEDDED AI</span>
+          </div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Vision-Guided 6-DOF Robotic Arm</h3>
+            <p class="news-card-desc">Industrial pick-and-place arm combining inverse kinematics with depth camera perception to automatically grade agricultural produce.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">OpenCV</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Kinematics</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Edge TPU</span>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-card-date">Status: Hardware Prototype</span>
+              <a href="contact.html" class="read-story-link">Project Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="images/field_ml.jpg" alt="Crop Health Detection">
+            <span class="news-category-badge" style="background:#0284C7;">COMPUTER VISION</span>
+          </div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Mobile Plant Disease Diagnosis</h3>
+            <p class="news-card-desc">Edge computer vision app enabling smallholder Somali farmers to capture leaf images and instantly identify fungal and parasitic infections.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">TensorFlow Lite</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Flutter</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Edge AI</span>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-card-date">Status: Field Trial</span>
+              <a href="contact.html" class="read-story-link">Project Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="images/field_cv.jpg" alt="Traffic Density Analysis">
+            <span class="news-category-badge" style="background:#DB2777;">URBAN AI</span>
+          </div>
+          <div class="news-card-body">
+            <h3 class="news-card-title">Mogadishu Smart Traffic Density AI</h3>
+            <p class="news-card-desc">Automated vehicle tracking and intersection congestion estimator operating over commercial CCTV feeds to optimize urban transit flow.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;">
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">DeepSORT</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">YOLOv8</span>
+              <span style="font-size:0.75rem; background:#E2E8F0; padding:3px 10px; border-radius:999px; font-weight:600;">Python</span>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-card-date">Status: Research Stage</span>
+              <a href="contact.html" class="read-story-link">Project Brief <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-col">
-        <h4><span class="logo-badge">⚡ AI</span> Arkaan AI Center</h4>
-        <p>Empowering the next generation of AI innovators in Somalia and beyond.</p>
-        <p style="margin-top:12px;">📍 Wadajir, KM4, Mogadishu, Somalia</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>📞 <a href="tel:0616434302">0616434302</a></p>
-        <p>✉️ <a href="mailto:ftimfatima85@gmail.com">ftimfatima85@gmail.com</a></p>
-        <p>📍 Wadajir, KM4, Mogadishu</p>
-      </div>
-      <div class="footer-col">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook">📘</a>
-          <a href="#" aria-label="Twitter">🐦</a>
-          <a href="#" aria-label="LinkedIn">💼</a>
-          <a href="#" aria-label="YouTube">📺</a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+          </a>
+          <p>Mogadishu's premier AI education, research, and innovation ecosystem.</p>
+          <div class="social-icons-wrap">
+            <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="programs.html">AI Programs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Details</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Wadajir, KM4, Mogadishu, Somalia</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> 0616434302 / +252 61 6434302</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> ftimfatima85@gmail.com</div>
         </div>
       </div>
+      <div class="footer-bottom">
+        <div>© 2026 Arkaan AI Center. All rights reserved.</div>
+      </div>
     </div>
-    <div class="copyright">© 2026 Arkaan AI Center. All rights reserved. | Wadajir, KM4, Mogadishu, Somalia</div>
   </footer>
+
+  <a href="https://wa.me/252616434302" target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-whatsapp-tooltip">Chat with Arkaan AI</span>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
