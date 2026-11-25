@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Insights – Arkaan AI Center</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrapper">
+        <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+        <div class="logo-text">
+          <div class="logo-title">arkaan<span>.ai</span></div>
+          <div class="logo-subtitle">AI & Technology Center</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="programs.html">AI Programs</a>
+        <a href="projects.html">Projects</a>
+        <a href="news.html" class="active">News & Updates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="register.html" class="btn btn-primary btn-sm">Join Us</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div>
+      <div class="mobile-drawer-header">
+        <div class="logo-wrapper">
+          <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+        </div>
+        <button class="close-drawer-btn" id="closeDrawerBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="mobile-menu-links">
+        <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="about.html">About Us <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="services.html">Services <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="programs.html">AI Programs <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="projects.html">Projects <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="news.html" class="active">News & Updates <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="gallery.html">Gallery <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Page Hero -->
+  <section class="page-hero-banner">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html" style="color:var(--cyan);">Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i>
+        <span>News & Insights</span>
+      </div>
+      <h1>Latest News & Insights</h1>
+      <p>Official announcements, strategic partnerships, student triumphs, and AI developments from Arkaan Hub.</p>
+    </div>
+  </section>
+
+  <!-- News Grid Section -->
+  <section class="section bg-light">
+    <div class="container">
+      
+      <!-- Category Filter Pills -->
+      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:48px;">
+        <button class="btn btn-sm news-filter-pill active" data-category="All" style="border:1.5px solid var(--border-color); background:var(--white); color:var(--navy);">All Stories</button>
+        <button class="btn btn-sm news-filter-pill" data-category="Partnership" style="border:1.5px solid var(--border-color); background:var(--white); color:var(--navy);">Partnerships</button>
+        <button class="btn btn-sm news-filter-pill" data-category="Program" style="border:1.5px solid var(--border-color); background:var(--white); color:var(--navy);">Program Launches</button>
+        <button class="btn btn-sm news-filter-pill" data-category="Summit" style="border:1.5px solid var(--border-color); background:var(--white); color:var(--navy);">Summits & Events</button>
+        <button class="btn btn-sm news-filter-pill" data-category="Robotics" style="border:1.5px solid var(--border-color); background:var(--white); color:var(--navy);">Robotics</button>
+      </div>
+
+      <!-- News Cards Grid -->
+      <div class="card-grid-3" id="allNewsGrid">
+        <!-- Rendered dynamically from news-data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrapper">
+            <div class="logo-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="logo-text"><div class="logo-title">arkaan<span>.ai</span></div></div>
+          </a>
+          <p>Mogadishu's premier AI education, research, and innovation ecosystem.</p>
+          <div class="social-icons-wrap">
+            <a href="https://wa.me/252616434302" target="_blank" class="social-icon-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">AI Programs</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Administration</h4>
+          <ul class="footer-links">
+            <li><a href="admin.html">News Manager (Admin)</a></li>
+            <li><a href="register.html">Student Enrollment</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Details</h4>
+          <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i> Wadajir, KM4, Mogadishu, Somalia</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-phone"></i> 0616434302 / +252 61 6434302</div>
+          <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i> ftimfatima85@gmail.com</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Arkaan AI Center. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/252616434302" target="_blank" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-whatsapp-tooltip">Chat with Arkaan AI</span>
+  </a>
+
+  <script src="js/news-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
