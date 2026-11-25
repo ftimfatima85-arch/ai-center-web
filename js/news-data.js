@@ -1,22 +1,21 @@
 /**
  * Arkaan AI Center - News & Insights Data Layer
- * Inspired by Arkaan.so design & content structure
- * Handles localStorage persistence and CRUD operations
+ * Directly synchronized with real content & images from http://arkaan.so/
  */
 
 const INITIAL_NEWS = [
   {
     id: 1,
-    title: "Official Partnership Announcement: Arkaan AI Center & Dhaxalreeb Leadership Center",
+    title: "Official Partnership Announcement: Arkaan Hub & Dhaxalreeb Leadership Center",
     category: "Strategic Partnership",
     categoryColor: "#0284C7",
     date: "19 October 2026",
-    image: "images/news_partnership.jpg",
-    excerpt: "Arkaan AI Center & Leadership Hub is pleased to announce its strategic partnership with Dhaxalreeb Leadership to advance youth tech governance...",
+    image: "images/arkaan_hero_bg.jpg",
+    excerpt: "Arkaan Leadership & Innovation Hub is pleased to announce its partnership with Dhaxalreeb Leadership Development Center following the signing of a Memorandum of Understanding (MoU)...",
     content: `
-      <p>Arkaan AI Center is proud to announce a historic strategic partnership with Dhaxalreeb Leadership Center in Mogadishu, Somalia. This landmark collaboration brings together cutting-edge artificial intelligence education with ethical leadership development to prepare the next generation of Somali leaders.</p>
+      <p>Arkaan Leadership & Innovation Hub is pleased to announce its strategic partnership with Dhaxalreeb Leadership Development Center following the official signing of a Memorandum of Understanding (MoU) in Mogadishu, Somalia.</p>
       
-      <p>The signing ceremony, held at the Arkaan Innovation Campus in Wadajir, KM4, was attended by distinguished academic leaders, government representatives, youth advocates, and private sector pioneers. The initiative aims to equip over 1,000 Somali youth with practical AI competencies combined with ethical decision-making frameworks over the next two years.</p>
+      <p>The high-profile signing ceremony was attended by distinguished academic leaders, government representatives, youth advocates, and private sector pioneers. The initiative aims to equip over 1,000 Somali youth with practical artificial intelligence and governance competencies combined with ethical leadership frameworks.</p>
       
       <h3>Key Pillars of the Partnership:</h3>
       <ul>
@@ -25,7 +24,7 @@ const INITIAL_NEWS = [
         <li><strong>Joint Research Publications:</strong> Policy briefs and technical whitepapers on AI readiness and digital economy in the Horn of Africa.</li>
       </ul>
 
-      <p>"Through this partnership, we are bridging the critical divide between technological capability and civic responsibility," said the Academic Coordinator of Arkaan AI Center. "Somalia's future depends on leaders who understand the transformative power of AI and how to deploy it responsibly for the common good."</p>
+      <p>"Through this partnership, we are bridging the critical divide between technological capability and civic responsibility," said the Leadership Coordinator. "Somalia's future depends on leaders who understand the transformative power of emerging technologies and how to deploy them responsibly for the common good."</p>
 
       <p>Applications for the inaugural cohort of the joint fellowship will open next month through the Arkaan online portal.</p>
     `,
@@ -34,25 +33,25 @@ const INITIAL_NEWS = [
   },
   {
     id: 2,
-    title: "Launch of Skills for Employability & AI Innovation Program (Green Growth Track)",
+    title: "Launch of Skills for Employability & Entrepreneurship Program (Green Growth Project)",
     category: "Program Launch",
     categoryColor: "#059669",
     date: "12 October 2026",
-    image: "images/news_launch.jpg",
-    excerpt: "In partnership with leading regional tech organizations, Arkaan AI Center launched its advanced employability program focusing on sustainable technology...",
+    image: "images/arkaan_furan.jpg",
+    excerpt: "In partnership with SOS Children's Villages Somalia and funded by Global Affairs Canada, Arkaan Hub launched the new cohort equipping youth with green economy skills...",
     content: `
-      <p>Arkaan AI Center has officially unveiled its new flagship program: <em>Skills for Employability & AI Innovation (Green Growth Track)</em>. This pioneering initiative is designed to bridge the youth unemployment gap by delivering high-impact, hands-on technical skills in predictive analytics, IoT, and AI-driven agricultural solutions.</p>
+      <p>In partnership with SOS Children's Villages Somalia and funded by Global Affairs Canada, Arkaan Hub has officially launched the <em>Skills for Employability & Entrepreneurship Program (Green Growth Project)</em>.</p>
 
-      <p>The program curriculum was co-designed with regional technology employers and international development partners to ensure direct alignment with modern industry needs. Over an intensive 16-week period, participants gain mastery in Python, Scikit-learn, TensorFlow, and Edge AI deployment on low-cost hardware.</p>
+      <p>The program curriculum was co-designed with regional technology employers and international development partners to ensure direct alignment with modern industry needs. Over an intensive 16-week period, participants gain mastery in digital skills, sustainable technology, and enterprise development.</p>
 
       <h3>Program Highlights:</h3>
       <ul>
-        <li><strong>Real-world Capstones:</strong> Every participant builds and deploys an end-to-end AI prototype addressing regional food security, renewable energy, or water management.</li>
-        <li><strong>Industry Mentorship:</strong> 1-on-1 mentorship from seasoned machine learning engineers and data scientists across East Africa and the diaspora.</li>
-        <li><strong>Career Placement Assistance:</strong> Direct interviews and internship pipelines with top tech companies, telecom operators, and NGOs in Somalia.</li>
+        <li><strong>Real-world Capstones:</strong> Every participant builds and deploys an end-to-end prototype addressing regional food security, renewable energy, or water management.</li>
+        <li><strong>Industry Mentorship:</strong> 1-on-1 mentorship from seasoned practitioners and entrepreneurs across East Africa and the diaspora.</li>
+        <li><strong>Career Placement Assistance:</strong> Direct pipelines with top tech companies, telecom operators, and NGOs in Somalia.</li>
       </ul>
 
-      <p>"Our objective is not just to teach coding, but to build sustainable careers and foster local technological self-reliance," emphasized the Center Director. Cohort 1 applications are now being reviewed with classes commencing next week.</p>
+      <p>"Our objective is not just to teach theory, but to build sustainable careers and foster local technological self-reliance," emphasized the Center Director. Cohort applications are now open.</p>
     `,
     author: "Programs Directorate",
     readTime: "5 min read"
@@ -63,75 +62,55 @@ const INITIAL_NEWS = [
     category: "Innovation Summit",
     categoryColor: "#7C3AED",
     date: "28 September 2026",
-    image: "images/news_competition.jpg",
-    excerpt: "Academia, tech leaders, and government stakeholders gathered at Arkaan Hub to deliberate on digital sovereignty, AI regulation, and talent incubation...",
+    image: "images/arkaan_president.jpg",
+    excerpt: "Academia, tech leaders, and government stakeholders gathered at the Arkaan Hub to deliberate on digital transformation, workforce readiness, and strategic governance...",
     content: `
-      <p>The Arkaan Leadership Innovation Summit (LIS) 2026 concluded yesterday in Mogadishu, drawing over 350 delegates including university rectors, telecom executives, venture capitalists, and civic innovators. The high-level convening focused on the theme: <em>"Catalyzing East Africa's AI Renaissance: Talent, Infrastructure, and Impact."</em></p>
+      <p>The Arkaan Leadership Innovation Summit (LIS) 2026 convened in Mogadishu, drawing over 350 delegates including university rectors, telecom executives, venture capitalists, and civic innovators. The high-level convening focused on the theme: <em>"Catalyzing East Africa's Renaissance: Talent, Infrastructure, and Impact."</em></p>
 
       <p>Keynote speeches highlighted the tremendous potential of Somalia's youthful demographics to leapfrog legacy technologies into decentralized AI, localized language models, and autonomous robotics.</p>
 
       <h3>Key Outcomes & Communiqué:</h3>
       <ul>
-        <li><strong>Somali NLP Taskforce:</strong> Formation of an open-source research collective dedicated to developing state-of-the-art Somali Large Language Models and speech datasets.</li>
-        <li><strong>University-Industry Consortium:</strong> Shared GPU clusters and research facilities hosted at Arkaan AI Center open to accredited university researchers.</li>
-        <li><strong>Youth Robotics Grant Fund:</strong> A $50,000 challenge fund to support STEM robotics clubs in Mogadishu secondary schools.</li>
+        <li><strong>National Digital Taskforce:</strong> Formation of an open-source research collective dedicated to developing state-of-the-art regional LLMs and technological datasets.</li>
+        <li><strong>University-Industry Consortium:</strong> Shared GPU clusters and research facilities hosted at Arkaan Hub open to accredited university researchers.</li>
+        <li><strong>Youth Innovation Grant Fund:</strong> A $50,000 challenge fund to support STEM and robotics clubs in Mogadishu.</li>
       </ul>
 
-      <p>The event concluded with an exhibition featuring 18 breakthrough student projects developed in the Arkaan Robotics and Computer Vision labs, drawing immense praise from visiting international dignitaries.</p>
+      <p>The event concluded with an exhibition featuring 18 breakthrough student projects, drawing immense praise from visiting international dignitaries.</p>
     `,
     author: "Summit Press Office",
     readTime: "6 min read"
   },
   {
     id: 4,
-    title: "Student Robotics Team Wins First Place in East Africa Autonomous Drone Challenge",
-    category: "Robotics & AI",
+    title: "High-Level Roundtable on Institutional Governance & Impactful Investments",
+    category: "Policy & Governance",
     categoryColor: "#EA580C",
-    date: "14 September 2026",
-    image: "images/project1.jpg",
-    excerpt: "An extraordinary achievement by our student robotics squad who built an autonomous search-and-rescue UAV navigating GPS-denied environments...",
+    date: "15 September 2026",
+    image: "images/arkaan_opm.jpg",
+    excerpt: "Senior public sector delegations and private sector executives met at the KM4 Hub to align strategies for institutional modernization and sustainable growth...",
     content: `
-      <p>A team of five student researchers from the Arkaan Robotics Division has made national history by taking 1st Place at the East Africa Autonomous Systems Championship. Competing against 22 university teams across the region, the Arkaan team demonstrated an AI-guided unmanned aerial vehicle (UAV) capable of autonomous indoor obstacle avoidance without GPS signals.</p>
-
-      <p>The drone utilized lightweight onboard computer vision running real-time YOLOv8 models paired with edge LiDAR sensors for SLAM (Simultaneous Localization and Mapping). The system was praised by international judges for its resource efficiency, robust fault tolerance, and rapid deployment readiness.</p>
-
-      <p>"This win proves that with the right mentors, access to modern labs, and relentless ambition, Somali students can stand at the very pinnacle of global technological innovation," noted Lead Robotics Instructor.</p>
+      <p>Senior public sector delegations, international development partners, and private sector executives met at Arkaan Hub in Wadajir, KM4, for a high-level roundtable on Institutional Governance and Sustainable Economic Investments.</p>
+      
+      <p>The discussion centered on modernizing regulatory frameworks, deploying transparent digital public infrastructure, and creating favorable conditions for tech-driven foreign direct investments.</p>
     `,
-    author: "Robotics Lab",
-    readTime: "3 min read"
-  },
-  {
-    id: 5,
-    title: "Women in AI Somalia: 40 Talented Engineers Graduate in Data Science & Machine Learning",
-    category: "Talent Development",
-    categoryColor: "#DB2777",
-    date: "05 August 2026",
-    image: "images/student1.jpg",
-    excerpt: "Celebrating the graduation of our Women in AI cohort, who completed rigorous training in computer vision, deep neural networks, and web engineering...",
-    content: `
-      <p>Arkaan AI Center proudly hosted the graduation ceremony for the inaugural Women in AI Somalia cohort. Forty exceptional female university students and young professionals completed the rigorous 14-week specialized diploma in Machine Learning and Data Engineering.</p>
-
-      <p>The ceremony was celebrated with project demonstrations ranging from automated maternal health triage algorithms to computer vision systems detecting locust swarm trajectories to safeguard regional crops.</p>
-
-      <p>Over 75% of the graduates have already secured internship and full-time employment commitments with local telecommunications, banking, and international humanitarian agencies operating across Somalia.</p>
-    `,
-    author: "Diversity & Inclusion Team",
+    author: "Governance Directorate",
     readTime: "4 min read"
   },
   {
-    id: 6,
-    title: "Launch of the National Data Science Initiative in Collaboration with Somali Universities",
-    category: "Academic Initiative",
+    id: 5,
+    title: "Arkaan Public Coaching Series & Executive Leadership Masterclass",
+    category: "Masterclass & Events",
     categoryColor: "#0284C7",
-    date: "22 July 2026",
-    image: "images/field_ds.jpg",
-    excerpt: "Providing open curriculum, cloud compute credits, and mentor access to empower over 2,000 university students across Mogadishu and regional states...",
+    date: "02 September 2026",
+    image: "images/arkaan_event.jpg",
+    excerpt: "Over 120 aspiring leaders and young managers attended an intensive masterclass on ethical leadership, agile team execution, and strategic mindset...",
     content: `
-      <p>To accelerate national digital literacy, Arkaan AI Center in partnership with leading higher education institutions has launched the National Data Science Initiative. The multi-tiered program provides certified online and in-person curricula in statistics, SQL, data wrangling, and predictive modeling.</p>
-
-      <p>Through this initiative, participating university computer science departments will receive subsidized access to high-performance GPU workstations and verified cloud computing credits, enabling students to tackle production-grade AI problems.</p>
+      <p>Over 120 aspiring leaders, young managers, and university student leaders attended an intensive masterclass on ethical leadership, agile team execution, and strategic mindset at Arkaan Hub.</p>
+      
+      <p>The masterclass was facilitated by visiting executive coaches and seasoned institutional leaders, focusing on emotional intelligence, conflict resolution, and data-driven decision-making in high-pressure organizational environments.</p>
     `,
-    author: "Academic Outreach",
+    author: "Executive Academy",
     readTime: "3 min read"
   }
 ];
@@ -139,7 +118,7 @@ const INITIAL_NEWS = [
 // Helper functions for persistent news management
 function getNews() {
   try {
-    const data = localStorage.getItem("arkaan_news_data");
+    const data = localStorage.getItem("arkaan_news_data_v2");
     if (data) {
       const parsed = JSON.parse(data);
       if (Array.isArray(parsed) && parsed.length > 0) {
@@ -154,7 +133,7 @@ function getNews() {
 
 function saveNews(articles) {
   try {
-    localStorage.setItem("arkaan_news_data", JSON.stringify(articles));
+    localStorage.setItem("arkaan_news_data_v2", JSON.stringify(articles));
     return true;
   } catch (err) {
     console.error("Failed to save news to localStorage:", err);
@@ -197,9 +176,4 @@ function deleteArticle(id) {
   const filtered = all.filter(item => String(item.id) !== String(id));
   saveNews(filtered);
   return filtered;
-}
-
-function resetToDefaultNews() {
-  saveNews(INITIAL_NEWS);
-  return INITIAL_NEWS;
 }
