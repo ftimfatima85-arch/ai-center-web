@@ -1,124 +1,150 @@
 /**
- * Arkaan AI Center - News & Insights Data Layer
- * Directly synchronized with real content & images from http://arkaan.so/
+ * Arkaan AI Center - News & Insights Data Layer (v=3)
+ * Featuring Authentic Uploaded Photographs & AI Center Leadership Context
  */
 
 const INITIAL_NEWS = [
   {
     id: 1,
-    title: "Official Partnership Announcement: Arkaan Hub & Dhaxalreeb Leadership Center",
+    title: "Official Strategic Partnership: Arkaan AI Center & Dhaxalreeb Leadership Institute",
     category: "Strategic Partnership",
-    categoryColor: "#0284C7",
+    categoryColor: "#0B254A",
     date: "19 October 2026",
-    image: "images/arkaan_hero_bg.jpg",
-    excerpt: "Arkaan Leadership & Innovation Hub is pleased to announce its partnership with Dhaxalreeb Leadership Development Center following the signing of a Memorandum of Understanding (MoU)...",
+    image: "images/arkaan_hall.jpg",
+    excerpt: "Arkaan AI Center & Innovation Hub is pleased to announce its strategic partnership with Dhaxalreeb Leadership Development Center to accelerate national AI competencies...",
     content: `
-      <p>Arkaan Leadership & Innovation Hub is pleased to announce its strategic partnership with Dhaxalreeb Leadership Development Center following the official signing of a Memorandum of Understanding (MoU) in Mogadishu, Somalia.</p>
+      <p>Arkaan AI Center & Innovation Hub has officially entered into a landmark strategic partnership with Dhaxalreeb Leadership Development Center following the formal signing of a Memorandum of Understanding (MoU) in Mogadishu, Somalia.</p>
       
-      <p>The high-profile signing ceremony was attended by distinguished academic leaders, government representatives, youth advocates, and private sector pioneers. The initiative aims to equip over 1,000 Somali youth with practical artificial intelligence and governance competencies combined with ethical leadership frameworks.</p>
+      <p>The ceremony brought together university leaders, technology executives, policymakers, and youth innovators. The joint initiative aims to train and empower over 1,000 Somali youth with practical artificial intelligence skills, ethical digital governance, and technical leadership.</p>
       
-      <h3>Key Pillars of the Partnership:</h3>
+      <h3>Core Pillars of the Collaboration:</h3>
       <ul>
-        <li><strong>AI & Governance Fellowship:</strong> A 6-month intensive fellowship integrating machine learning policy and digital ethics.</li>
-        <li><strong>Youth Tech Incubator:</strong> Mentorship and seed funding for student-led AI solutions addressing public sector challenges.</li>
-        <li><strong>Joint Research Publications:</strong> Policy briefs and technical whitepapers on AI readiness and digital economy in the Horn of Africa.</li>
+        <li><strong>AI & Digital Leadership Fellowship:</strong> A 6-month intensive applied learning track combining modern machine learning and digital public infrastructure.</li>
+        <li><strong>Youth AI Innovation Lab:</strong> Seed funding and technical mentorship for student prototypes addressing local education, healthcare, and public service challenges.</li>
+        <li><strong>Somali Language & AI Research:</strong> Collaborative research initiatives on natural language processing, regional datasets, and open-source models for the Horn of Africa.</li>
       </ul>
 
-      <p>"Through this partnership, we are bridging the critical divide between technological capability and civic responsibility," said the Leadership Coordinator. "Somalia's future depends on leaders who understand the transformative power of emerging technologies and how to deploy them responsibly for the common good."</p>
-
-      <p>Applications for the inaugural cohort of the joint fellowship will open next month through the Arkaan online portal.</p>
+      <p>"Through this partnership, Arkaan AI Center continues to champion technological self-reliance, giving Somali youth the tools to build the intelligent solutions of tomorrow," stated the Program Director.</p>
     `,
     author: "Arkaan Communications",
     readTime: "4 min read"
   },
   {
     id: 2,
-    title: "Launch of Skills for Employability & Entrepreneurship Program (Green Growth Project)",
+    title: "Launch of Youth AI Skills & Tech Employability Program (Digital Growth Initiative)",
     category: "Program Launch",
     categoryColor: "#059669",
     date: "12 October 2026",
-    image: "images/arkaan_furan.jpg",
-    excerpt: "In partnership with SOS Children's Villages Somalia and funded by Global Affairs Canada, Arkaan Hub launched the new cohort equipping youth with green economy skills...",
+    image: "images/arkaan_screen.jpg",
+    excerpt: "Equipping young developers and university graduates with practical machine learning, cloud computing, and software engineering capabilities for the modern workforce...",
     content: `
-      <p>In partnership with SOS Children's Villages Somalia and funded by Global Affairs Canada, Arkaan Hub has officially launched the <em>Skills for Employability & Entrepreneurship Program (Green Growth Project)</em>.</p>
+      <p>Arkaan AI Center has officially inaugurated the <em>Youth AI Skills & Tech Employability Program</em>, designed in collaboration with regional technology employers and international development partners.</p>
 
-      <p>The program curriculum was co-designed with regional technology employers and international development partners to ensure direct alignment with modern industry needs. Over an intensive 16-week period, participants gain mastery in digital skills, sustainable technology, and enterprise development.</p>
+      <p>Over an intensive 16-week hands-on bootcamp, participants develop production-ready competencies in Python, machine learning workflows, data engineering, and intelligent application design.</p>
 
       <h3>Program Highlights:</h3>
       <ul>
-        <li><strong>Real-world Capstones:</strong> Every participant builds and deploys an end-to-end prototype addressing regional food security, renewable energy, or water management.</li>
-        <li><strong>Industry Mentorship:</strong> 1-on-1 mentorship from seasoned practitioners and entrepreneurs across East Africa and the diaspora.</li>
-        <li><strong>Career Placement Assistance:</strong> Direct pipelines with top tech companies, telecom operators, and NGOs in Somalia.</li>
+        <li><strong>Real-World Capstone Projects:</strong> Students build and deploy working AI systems solving challenges in renewable energy, logistics, and fintech.</li>
+        <li><strong>Industry Mentorship:</strong> 1-on-1 coaching from seasoned machine learning practitioners and tech leaders in Somalia and the diaspora.</li>
+        <li><strong>Direct Career Placement:</strong> Job matching and paid internship opportunities with top telecom providers, financial institutions, and tech enterprises.</li>
       </ul>
-
-      <p>"Our objective is not just to teach theory, but to build sustainable careers and foster local technological self-reliance," emphasized the Center Director. Cohort applications are now open.</p>
     `,
     author: "Programs Directorate",
     readTime: "5 min read"
   },
   {
     id: 3,
-    title: "Arkaan Leadership Innovation Summit (LIS) Convenes Ecosystem Leaders in Mogadishu",
+    title: "National Leadership & AI Innovation Summit Convenes Ecosystem Pioneers in Mogadishu",
     category: "Innovation Summit",
-    categoryColor: "#7C3AED",
+    categoryColor: "#081C3A",
     date: "28 September 2026",
     image: "images/arkaan_president.jpg",
-    excerpt: "Academia, tech leaders, and government stakeholders gathered at the Arkaan Hub to deliberate on digital transformation, workforce readiness, and strategic governance...",
+    excerpt: "Government dignitaries, academic leaders, and technology founders gather to discuss artificial intelligence adoption, digital sovereignty, and tech job creation...",
     content: `
-      <p>The Arkaan Leadership Innovation Summit (LIS) 2026 convened in Mogadishu, drawing over 350 delegates including university rectors, telecom executives, venture capitalists, and civic innovators. The high-level convening focused on the theme: <em>"Catalyzing East Africa's Renaissance: Talent, Infrastructure, and Impact."</em></p>
+      <p>The annual Leadership & AI Innovation Summit convened in Mogadishu, welcoming distinguished state officials, university chancellors, tech founders, and international development representatives.</p>
 
-      <p>Keynote speeches highlighted the tremendous potential of Somalia's youthful demographics to leapfrog legacy technologies into decentralized AI, localized language models, and autonomous robotics.</p>
+      <p>Discussions centered on preparing Somalia’s young population for the fourth industrial revolution, investing in localized computing infrastructure, and fostering homegrown artificial intelligence breakthroughs.</p>
 
-      <h3>Key Outcomes & Communiqué:</h3>
+      <h3>Key Action Points:</h3>
       <ul>
-        <li><strong>National Digital Taskforce:</strong> Formation of an open-source research collective dedicated to developing state-of-the-art regional LLMs and technological datasets.</li>
-        <li><strong>University-Industry Consortium:</strong> Shared GPU clusters and research facilities hosted at Arkaan Hub open to accredited university researchers.</li>
-        <li><strong>Youth Innovation Grant Fund:</strong> A $50,000 challenge fund to support STEM and robotics clubs in Mogadishu.</li>
+        <li><strong>National AI Talent Consortium:</strong> Establishing unified curriculum standards across Somali universities in data science and machine learning.</li>
+        <li><strong>Open Research Infrastructure:</strong> Shared GPU labs and compute facilities accessible to accredited students and academic researchers at Arkaan AI Center.</li>
+        <li><strong>Youth Technology Innovation Challenge:</strong> Competitive grants to support student-led AI startups in Mogadishu.</li>
       </ul>
-
-      <p>The event concluded with an exhibition featuring 18 breakthrough student projects, drawing immense praise from visiting international dignitaries.</p>
     `,
-    author: "Summit Press Office",
+    author: "Summit Directorate",
     readTime: "6 min read"
   },
   {
     id: 4,
-    title: "High-Level Roundtable on Institutional Governance & Impactful Investments",
+    title: "High-Level Executive Roundtable on AI Governance, Ethics & Enterprise Modernization",
     category: "Policy & Governance",
-    categoryColor: "#EA580C",
+    categoryColor: "#C2410C",
     date: "15 September 2026",
-    image: "images/arkaan_opm.jpg",
-    excerpt: "Senior public sector delegations and private sector executives met at the KM4 Hub to align strategies for institutional modernization and sustainable growth...",
+    image: "images/arkaan_roundtable.jpg",
+    excerpt: "Institutional leaders and enterprise executives deliberate on strategic guidelines for safe AI integration and public sector digitization...",
     content: `
-      <p>Senior public sector delegations, international development partners, and private sector executives met at Arkaan Hub in Wadajir, KM4, for a high-level roundtable on Institutional Governance and Sustainable Economic Investments.</p>
+      <p>Senior leaders from government ministries, banking institutions, and technology providers gathered at Arkaan AI Center for a strategic roundtable exploring safe AI deployment and enterprise automation.</p>
       
-      <p>The discussion centered on modernizing regulatory frameworks, deploying transparent digital public infrastructure, and creating favorable conditions for tech-driven foreign direct investments.</p>
+      <p>Participants evaluated practical strategies for data protection, ethical algorithmic decision-making, and public cloud adoption tailored to Somalia’s regulatory ecosystem.</p>
     `,
-    author: "Governance Directorate",
+    author: "Governance Council",
     readTime: "4 min read"
   },
   {
     id: 5,
-    title: "Arkaan Public Coaching Series & Executive Leadership Masterclass",
-    category: "Masterclass & Events",
-    categoryColor: "#0284C7",
-    date: "02 September 2026",
-    image: "images/arkaan_event.jpg",
-    excerpt: "Over 120 aspiring leaders and young managers attended an intensive masterclass on ethical leadership, agile team execution, and strategic mindset...",
+    title: "Keynote Address: Transforming Somali Youth Through Applied Technology & Leadership",
+    category: "Keynote & Leadership",
+    categoryColor: "#1E40AF",
+    date: "05 September 2026",
+    image: "images/arkaan_speaker.jpg",
+    excerpt: "Inspiring youth to transition from technology consumers to global innovators and software creators at the Arkaan Leadership & Innovation Hub...",
     content: `
-      <p>Over 120 aspiring leaders, young managers, and university student leaders attended an intensive masterclass on ethical leadership, agile team execution, and strategic mindset at Arkaan Hub.</p>
+      <p>In an inspiring keynote delivered at the Arkaan Leadership & Innovation Hub podium, community mentors and industry veterans spoke on the vital role of youthful ambition in shaping Africa's technological renaissance.</p>
       
-      <p>The masterclass was facilitated by visiting executive coaches and seasoned institutional leaders, focusing on emotional intelligence, conflict resolution, and data-driven decision-making in high-pressure organizational environments.</p>
+      <p>The address stressed that with accessible training, reliable internet, and mentorship, young Somalis can lead global engineering teams and build high-growth AI ventures.</p>
     `,
-    author: "Executive Academy",
+    author: "Executive Office",
     readTime: "3 min read"
+  },
+  {
+    id: 6,
+    title: "Leaders Forum: Accelerating Private Sector Growth Through Digital Innovation",
+    category: "Panel Forum",
+    categoryColor: "#047857",
+    date: "25 August 2026",
+    image: "images/arkaan_panel.jpg",
+    excerpt: "Industry leaders evaluate the transformative role of AI, automation, and modern tech infrastructure in driving local business resilience...",
+    content: `
+      <p>A distinguished panel of private sector leaders and startup executives met at Hotel Jazeera for an in-depth forum on commercializing tech innovations and modernizing supply chains.</p>
+      
+      <p>Speakers detailed how automated customer services, intelligent forecasting, and digital payment systems are generating double-digit productivity gains for Somali businesses.</p>
+    `,
+    author: "Enterprise Development",
+    readTime: "5 min read"
+  },
+  {
+    id: 7,
+    title: "B2B Networking & Tech Entrepreneurship: Unlocking Commercial AI Opportunities",
+    category: "B2B Innovation",
+    categoryColor: "#4338CA",
+    date: "10 August 2026",
+    image: "images/arkaan_youth_leader.jpg",
+    excerpt: "Connecting ambitious student founders with corporate partners, angel investors, and financial institutions to commercialize tech solutions...",
+    content: `
+      <p>Arkaan AI Center hosted an energetic B2B networking demo day, connecting student entrepreneurs with leading banks, telecoms, and international partners.</p>
+      
+      <p>Ten student teams showcased working prototypes ranging from localized smart agriculture sensors to automated financial analytics tools.</p>
+    `,
+    author: "Incubator Hub",
+    readTime: "4 min read"
   }
 ];
 
 // Helper functions for persistent news management
 function getNews() {
   try {
-    const data = localStorage.getItem("arkaan_news_data_v2");
+    const data = localStorage.getItem("arkaan_news_data_v3");
     if (data) {
       const parsed = JSON.parse(data);
       if (Array.isArray(parsed) && parsed.length > 0) {
@@ -133,7 +159,7 @@ function getNews() {
 
 function saveNews(articles) {
   try {
-    localStorage.setItem("arkaan_news_data_v2", JSON.stringify(articles));
+    localStorage.setItem("arkaan_news_data_v3", JSON.stringify(articles));
     return true;
   } catch (err) {
     console.error("Failed to save news to localStorage:", err);
